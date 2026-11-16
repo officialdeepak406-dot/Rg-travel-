@@ -1,0 +1,368 @@
+/* RG Tempo Traveller — responsive override for ALL pages
+   Add this file AFTER each page's existing stylesheet(s).
+   Designed for vehicle details, tariff cards, grids, forms and navigation. */
+
+/* ---------- Global mobile-safe foundation ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; overflow-x: clip; }
+img, video, iframe { max-width: 100%; }
+img { height: auto; }
+button, input, select, textarea { max-width: 100%; font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.container, .wrap, .page-container, .vehicle-container {
+  width: min(100% - 32px, 1200px);
+  margin-inline: auto;
+}
+section { min-width: 0; }
+p, li, h1, h2, h3, h4 { overflow-wrap: anywhere; }
+
+/* Keep existing site colours and visual identity; compact oversized spacing. */
+.section, section.section { padding-block: clamp(32px, 5vw, 68px); }
+h1 { font-size: clamp(2rem, 5vw, 4.6rem); line-height: 1.05; }
+h2 { font-size: clamp(1.55rem, 3.4vw, 2.8rem); line-height: 1.15; }
+h3 { font-size: clamp(1.08rem, 2vw, 1.45rem); line-height: 1.25; }
+p { line-height: 1.65; }
+
+/* ---------- Compact header/navigation ---------- */
+header.nav, .site-header, .main-header, .navbar {
+  max-width: 100%;
+}
+header.nav .navin, .nav-inner, .navbar-inner {
+  min-height: 72px;
+  gap: 16px;
+}
+header.nav .links, .nav-links, .navbar-nav {
+  gap: clamp(12px, 1.7vw, 24px);
+  flex-wrap: wrap;
+}
+header.nav .links > a, .nav-links > a, .navbar-nav > a {
+  font-size: 14px;
+  line-height: 1.35;
+}
+header.nav .brand b, .site-brand b { font-size: clamp(14px, 1.3vw, 17px); }
+header.nav .btn, .site-header .btn { white-space: nowrap; }
+
+/* ---------- All common card and grid layouts ---------- */
+.grid, .cards-grid, .features-grid, .vehicle-grid, .fleet-grid,
+.tariff-grid, .rate-grid, .pricing-grid, .price-grid, .package-grid,
+.options-grid, .ac-options, .vehicle-options, .detail-grid {
+  min-width: 0;
+}
+.vehicle-card, .gallery-card, .dest-card, .feature, .use-card,
+.tariff-card, .rate-card, .price-card, .package-card, .option-card,
+.ac-card, .non-ac-card, .spec-card, .detail-card, .panel {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.vehicle-card img, .gallery-card img, .dest-card img { display: block; width: 100%; object-fit: cover; }
+.btn, button, .button { min-height: 42px; }
+input, select, textarea { min-height: 44px; }
+
+/* ---------- Tariff / AC and Non-AC boxes: 2 columns x 2 rows ---------- */
+/* Common grid names used by vehicle detail pages */
+.tariff-grid, .rate-grid, .pricing-grid, .price-grid, .package-grid,
+.ac-options, .vehicle-options, .tariff-options, .fare-options,
+[data-tariff-grid], [data-rate-grid] {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  align-items: stretch;
+}
+
+/* AC / Non-AC cards stay compact and align evenly */
+.tariff-card, .rate-card, .price-card, .package-card, .option-card,
+.ac-card, .non-ac-card, .fare-card, .tariff-option, .rate-option,
+[data-tariff-card], [data-rate-card] {
+  width: auto !important;
+  min-width: 0 !important;
+  padding: clamp(12px, 2vw, 20px) !important;
+  border-radius: 14px;
+  overflow-wrap: anywhere;
+}
+.tariff-card h3, .rate-card h3, .price-card h3, .package-card h3,
+.option-card h3, .ac-card h3, .non-ac-card h3 {
+  font-size: clamp(14px, 1.7vw, 18px);
+  line-height: 1.25;
+  margin-block: 0 8px;
+}
+.tariff-card .price, .rate-card .price, .price-card .price,
+.package-card .price, .option-card .price,
+.tariff-card strong, .rate-card strong, .price-card strong {
+  font-size: clamp(18px, 2.4vw, 27px);
+  line-height: 1.2;
+}
+.tariff-card p, .rate-card p, .price-card p, .package-card p,
+.option-card p, .ac-card p, .non-ac-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-block: 6px;
+}
+
+/* If the page has an AC/Non-AC choice area, make its direct cards a 2×2 grid. */
+.tariff:has(.ac-card), .tariff:has(.non-ac-card),
+.tariff-section:has(.ac-card), .tariff-section:has(.non-ac-card),
+.tariff-panel:has(.ac-card), .tariff-panel:has(.non-ac-card) {
+  min-width: 0;
+}
+.tariff:has(.ac-card) .tariff-grid,
+.tariff:has(.non-ac-card) .tariff-grid,
+.tariff-section:has(.ac-card) .tariff-grid,
+.tariff-section:has(.non-ac-card) .tariff-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+/* Any tariff section with separate AC/non-AC cards inside a flex row */
+.tariff .cards, .tariff .options, .tariff .rates,
+.tariff-section .cards, .tariff-section .options, .tariff-section .rates,
+.tariff-panel .cards, .tariff-panel .options, .tariff-panel .rates {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+}
+
+/* Tables should scroll rather than stretch the mobile viewport. */
+.table-wrap, .table-responsive, .tariff-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px 12px; }
+
+/* ---------- Hero, gallery and vehicle details ---------- */
+.hero, .hero-shell, .hero-content { min-width: 0; }
+.hero-content { padding-block: clamp(36px, 7vw, 88px); }
+.hero-copy { max-width: 760px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.hero-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.gallery-grid, .gallery-wrap, .gallery-snap { min-width: 0; }
+.detail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.spec-row, .detail-chips, .features, .checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ---------- Forms / booking ---------- */
+.form, .booking-grid, .booking-form, .form-grid {
+  min-width: 0;
+}
+.field, .form-group { min-width: 0; }
+.field input, .field select, .field textarea,
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  min-width: 0;
+}
+textarea { resize: vertical; }
+form .btn, form button[type="submit"] { width: 100%; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 900px) {
+  .container, .wrap, .page-container, .vehicle-container {
+    width: min(100% - 28px, 760px);
+  }
+  .detail-grid, .booking-grid { grid-template-columns: 1fr; }
+  .section, section.section { padding-block: 38px; }
+  header.nav .links { gap: 12px; }
+  header.nav .links > a { font-size: 13px; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .container, .wrap, .page-container, .vehicle-container {
+    width: calc(100% - 24px);
+  }
+  .section, section.section { padding-block: 30px; }
+  h1 { font-size: clamp(30px, 9vw, 42px); }
+  h2 { font-size: clamp(24px, 7vw, 32px); }
+  h3 { font-size: 18px; }
+  p { font-size: 14px; line-height: 1.6; }
+
+  /* Two compact columns: AC + Non-AC options remain 2×2 on phones. */
+  .tariff-grid, .rate-grid, .pricing-grid, .price-grid, .package-grid,
+  .ac-options, .vehicle-options, .tariff-options, .fare-options,
+  [data-tariff-grid], [data-rate-grid],
+  .tariff .cards, .tariff .options, .tariff .rates,
+  .tariff-section .cards, .tariff-section .options, .tariff-section .rates,
+  .tariff-panel .cards, .tariff-panel .options, .tariff-panel .rates {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+  .tariff-card, .rate-card, .price-card, .package-card, .option-card,
+  .ac-card, .non-ac-card, .fare-card, .tariff-option, .rate-option,
+  [data-tariff-card], [data-rate-card] {
+    padding: 11px !important;
+    border-radius: 12px;
+  }
+  .tariff-card h3, .rate-card h3, .price-card h3, .package-card h3,
+  .option-card h3, .ac-card h3, .non-ac-card h3 { font-size: 13px; }
+  .tariff-card .price, .rate-card .price, .price-card .price,
+  .package-card .price, .option-card .price,
+  .tariff-card strong, .rate-card strong, .price-card strong { font-size: 18px; }
+  .tariff-card p, .rate-card p, .price-card p, .package-card p,
+  .option-card p, .ac-card p, .non-ac-card p { font-size: 12px; }
+
+  .hero-content { padding-block: 42px; }
+  .hero-actions .btn { flex: 1 1 145px; justify-content: center; text-align: center; }
+  .hero-pills .pill { font-size: 11px; padding: 7px 9px; }
+  .vehicle-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .vehicle-actions .btn { width: 100%; padding: 10px 8px; font-size: 12px; }
+  .spec-row { gap: 6px; }
+  .spec { font-size: 11px; padding: 6px 8px; }
+  .table-wrap, .table-responsive, .tariff-table-wrap { margin-inline: 0; }
+  th, td { padding: 9px 10px; font-size: 12px; }
+  .form, .form-grid { grid-template-columns: 1fr !important; }
+  .field, .form-group, .span2 { grid-column: 1 / -1; }
+  .help-launcher { max-width: calc(100vw - 28px); }
+}
+
+/* Very narrow phones: preserve two columns, with tighter padding. */
+@media (max-width: 360px) {
+  .container, .wrap, .page-container, .vehicle-container { width: calc(100% - 18px); }
+  .tariff-grid, .rate-grid, .pricing-grid, .price-grid, .package-grid,
+  .ac-options, .vehicle-options, .tariff-options, .fare-options,
+  .tariff .cards, .tariff .options, .tariff .rates,
+  .tariff-section .cards, .tariff-section .options, .tariff-section .rates {
+    gap: 6px !important;
+  }
+  .tariff-card, .rate-card, .price-card, .package-card, .option-card,
+  .ac-card, .non-ac-card { padding: 9px !important; }
+}
+
+/* =========================================
+   RG HERO SLIDER — DESKTOP + MOBILE
+   ========================================= */
+
+/* Hero section fits the screen responsively */
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-shell {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    overflow: hidden;
+}
+
+/* Clear images without extra filters */
+.hero-slide {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center;
+    filter: none !important;
+}
+
+    /* Remove extra overlays that make photos dull */
+    .hero-slide::before,
+    .hero-slide::after {
+        content: none !important;
+        display: none !important;
+    }
+
+/* Keep text readable over the image */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Desktop / Windows screens */
+@media (min-width: 1024px) {
+    .hero-shell {
+        min-height: min(760px, 82vh);
+    }
+
+    .hero-slide {
+        background-position: center center;
+    }
+
+    .hero-copy {
+        max-width: 760px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1023px) {
+    .hero-shell {
+        min-height: 650px;
+    }
+
+    .hero-slide {
+        background-position: center center;
+    }
+
+    .hero-copy {
+        max-width: 90%;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .hero-shell {
+        min-height: 620px;
+        min-height: 82svh;
+        max-height: 820px;
+    }
+
+    .hero-slide {
+        background-size: cover !important;
+        background-position: center center;
+    }
+
+    .hero-content {
+        padding-top: 100px;
+        padding-bottom: 65px;
+    }
+
+    .hero-copy {
+        width: 100%;
+        max-width: 100%;
+    }
+
+        .hero-copy h1 {
+            font-size: clamp(32px, 8.5vw, 44px);
+            line-height: 1.08;
+        }
+
+        .hero-copy p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+    }
+
+        .hero-actions .btn {
+            padding: 12px 14px;
+            font-size: 12px;
+        }
+
+    .hero-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
+        .hero-pills .pill {
+            font-size: 10px;
+            padding: 7px 9px;
+        }
+
+    .hero-bottom {
+        bottom: 15px;
+    }
+}
+
+/* Hide the four round hero slideshow indicators */
+.hero-bottom .dots,
+.hero-bottom .dot {
+    display: none !important;
+}
+

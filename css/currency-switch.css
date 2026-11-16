@@ -1,0 +1,44 @@
+/* RG Tempo Traveller - shared currency switch styles
+   Include this file on each vehicle detail page. */
+.rg-currency-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #e1e5da;
+  border-radius: 999px;
+  background: #f7f8f3;
+  font-family: "DM Sans", sans-serif;
+}
+.rg-currency-switch button {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 9px 15px;
+  background: transparent;
+  color: #294633;
+  font: 700 13px/1.2 "DM Sans", sans-serif;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.rg-currency-switch button[aria-pressed="true"] {
+  background: #183d2b;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(24, 61, 43, .15);
+}
+.rg-currency-switch button:focus-visible {
+  outline: 2px solid #c7a45c;
+  outline-offset: 3px;
+}
+.rg-currency-note {
+  margin-top: 8px;
+  color: #737a70;
+  font-size: 12px;
+  line-height: 1.6;
+}
+@media (max-width: 520px) {
+  .rg-currency-switch button {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}

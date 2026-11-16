@@ -1,0 +1,773 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>12 Seater Urbania Traveller | Travels in Chennai</title>
+  <meta name="description" content="Explore our 12 seater Urbania Traveller, vehicle features, AC and non-AC tariff, and request a callback for bookings from Chennai.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/details.css">
+  <link rel="stylesheet" href="../../css/currency-switch.css">
+  <link rel="stylesheet" href="../../css/rg-responsive-overrides.css">
+
+  <style>
+    /* Premium additions for the 12-seater page only */
+    :root {
+      --tariff-ink: #172b25;
+      --tariff-green: #244b3d;
+      --tariff-gold: #b38b48;
+      --tariff-cream: #f8f6f0;
+      --tariff-border: #e6e1d5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    .premium-intro {
+      max-width: 760px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .premium-intro h2,
+    .tariff-heading h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--tariff-ink);
+      line-height: 1.15;
+    }
+
+    .premium-intro p,
+    .tariff-heading p {
+      color: #6d756f;
+      line-height: 1.8;
+    }
+
+    .tariff-section {
+      padding: 76px 0;
+      background:
+        radial-gradient(ellipse at top right, #e8eee6 0, transparent 45%),
+        var(--tariff-cream);
+    }
+
+    .tariff-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .tariff-heading > div { max-width: 650px; }
+
+    .tariff-heading h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      margin: 10px 0;
+    }
+
+    .tariff-heading p { margin-bottom: 0; }
+
+    .tariff-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--tariff-gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .tariff-label::before {
+      content: "";
+      width: 25px;
+      height: 1px;
+      background: var(--tariff-gold);
+    }
+
+    .tariff-card {
+      overflow: hidden;
+      border: 1px solid var(--tariff-border);
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 18px 55px rgba(26, 48, 38, .07);
+    }
+
+    .tariff-card-top {
+      padding: 25px 28px;
+      background: var(--tariff-green);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .tariff-card-top h3 {
+      margin: 0 0 6px;
+      font-family: "Manrope", sans-serif;
+      font-size: 20px;
+    }
+
+    .tariff-card-top p {
+      margin: 0;
+      color: #dce8df;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .rate-pill {
+      flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+
+    .tariff-table-wrap { overflow-x: auto; }
+
+    .tariff-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 460px;
+    }
+
+    .tariff-table th,
+    .tariff-table td {
+      text-align: left;
+      padding: 19px 24px;
+      border-bottom: 1px solid #eeeae2;
+    }
+
+    .tariff-table thead th {
+      background: #fbfaf7;
+      color: #69746c;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .tariff-table tbody th {
+      color: var(--tariff-ink);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .tariff-table td {
+      color: #4b5a50;
+      font-size: 14px;
+    }
+
+    .tariff-table tbody tr:last-child th,
+    .tariff-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .rate-number {
+      color: var(--tariff-green);
+      font-size: 18px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .rate-unit {
+      display: block;
+      margin-top: 3px;
+      color: #879087;
+      font-size: 11px;
+    }
+
+    .tariff-footnote {
+      padding: 19px 25px;
+      border-top: 1px solid var(--tariff-border);
+      background: #fffdf8;
+      color: #737970;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .tariff-footnote strong { color: var(--tariff-ink); }
+
+    .tariff-allowances {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .allowance-card {
+      padding: 22px;
+      border: 1px solid var(--tariff-border);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .allowance-card span {
+      display: block;
+      color: #7b827a;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .allowance-card strong {
+      display: block;
+      margin: 8px 0;
+      color: var(--tariff-green);
+      font-family: "Manrope", sans-serif;
+      font-size: 25px;
+    }
+
+    .allowance-card p {
+      margin: 0;
+      color: #737970;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .tariff-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 24px;
+      padding: 23px 25px;
+      border-radius: 16px;
+      background: #edf1e9;
+    }
+
+    .tariff-cta strong {
+      display: block;
+      color: var(--tariff-ink);
+      margin-bottom: 5px;
+    }
+
+    .tariff-cta p {
+      margin: 0;
+      color: #687269;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .tariff-cta .gold-btn {
+      flex-shrink: 0;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .detail-hero .hero-image img,
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .media-card img { display: block; }
+
+    .premium-feature-note {
+      margin-top: 22px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--tariff-gold);
+      background: #f8f6f0;
+      color: #687269;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 700px) {
+      .tariff-section { padding: 50px 0; }
+
+      .tariff-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .tariff-card { border-radius: 15px; }
+
+      .tariff-card-top {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px 19px;
+      }
+
+      .tariff-table th,
+      .tariff-table td {
+        padding: 16px 14px;
+      }
+
+      .tariff-allowances { grid-template-columns: 1fr; }
+
+      .tariff-cta {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .tariff-cta .gold-btn { width: 100%; }
+
+      .rate-number { font-size: 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="detail-nav">
+  <div class="wrap nav-row">
+    <a class="brand" href="../../index.html">
+      <span class="logo">RG</span>
+      <span>
+        <b>Travels in Chennai</b>
+        <small>CHENNAI • TRAVEL TOGETHER</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="../../index.html#fleet" class="active">Fleet</a>
+      <a href="../../index.html#tempo-gallery">Vehicle Gallery</a>
+      <a href="../../index.html#trips">Trips</a>
+      <a href="../../index.html#cities">Destinations</a>
+      <a href="../../index.html#booking">Contact</a>
+      <a class="nav-btn" href="#callback">Book a Tempo</a>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleDetailMenu()" aria-label="Open menu">☰</button>
+  </div>
+
+  <div id="detailMenu" class="detail-menu">
+    <a href="../../index.html#fleet">Fleet</a>
+    <a href="../../index.html#tempo-gallery">Vehicle Gallery</a>
+    <a href="../../index.html#trips">Trips</a>
+    <a href="../../index.html#cities">Destinations</a>
+    <a href="../../index.html#booking">Contact</a>
+    <a href="#callback">Book this vehicle</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- VEHICLE HERO -->
+  <section class="detail-hero">
+    <div class="wrap">
+      <a class="back" href="../../index.html#fleet">← Back to fleet</a>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="kicker">SMALL GROUP • PREMIUM</div>
+
+          <h1>12 Seater Urbania Traveller</h1>
+
+          <p>
+            A premium small-group travel option for friends, family tours,
+            corporate outings, pilgrimages and private events from Chennai.
+          </p>
+
+          <div class="chips">
+            <span>AC configuration</span>
+            <span>Luxury-style seating</span>
+            <span>Music system</span>
+            <span>DJ lights on selected vehicles</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="gold-btn" href="#tariff">View Tariff</a>
+            <a class="outline-btn" href="#callback">Request a Callback</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="../../assets/images/vehicles/12-seater/exterior-01.jpg"
+            alt="12 seater Urbania Traveller exterior"
+            onerror="this.onerror=null;this.src='../../assets/images/site/tempo.jpg';"
+          >
+          <span>12 SEATER</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VEHICLE IMAGE GALLERY -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">VEHICLE GALLERY</div>
+          <h2>See the 12 seater before you book.</h2>
+        </div>
+        <p>
+          Explore the exterior, interior and seating. Add your actual vehicle
+          photos to the matching image folder.
+        </p>
+      </div>
+
+      <div class="media-slider" data-autoplay="4200">
+        <div class="media-track">
+          <article class="media-card">
+            <img src="../../assets/images/vehicles/12-seater/exterior-01.jpg"
+                 alt="12 seater exterior front view"
+                 onerror="this.onerror=null;this.src='../../assets/images/site/tempo.jpg';">
+            <span>EXTERIOR</span>
+          </article>
+
+          <article class="media-card">
+            <img src="../../assets/images/vehicles/12-seater/exterior-02.jpg"
+                 alt="12 seater exterior side view"
+                 onerror="this.onerror=null;this.src='../../assets/images/site/tempo.jpg';">
+            <span>EXTERIOR</span>
+          </article>
+
+          <article class="media-card">
+            <img src="../../assets/images/vehicles/12-seater/interior-01.jpg"
+                 alt="12 seater passenger interior"
+                 onerror="this.onerror=null;this.src='../../assets/images/site/tempo.jpg';">
+            <span>INTERIOR</span>
+          </article>
+
+          <article class="media-card">
+            <img src="../../assets/images/vehicles/12-seater/interior-02.jpg"
+                 alt="12 seater passenger seating"
+                 onerror="this.onerror=null;this.src='../../assets/images/site/tempo.jpg';">
+            <span>SEATING</span>
+          </article>
+        </div>
+
+        <div class="slider-bar">
+          <small>Auto-moving • hover or touch to pause</small>
+          <div>
+            <button type="button" onclick="moveTrack(this,-1)" aria-label="Previous image">←</button>
+            <button type="button" onclick="moveTrack(this,1)" aria-label="Next image">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="premium-feature-note">
+        <strong>Image folder:</strong>
+        <code>assets/images/vehicles/12-seater/</code>.
+        Keep the filenames shown above, or change the corresponding HTML
+        paths to match your actual image filenames and extensions.
+      </div>
+    </div>
+  </section>
+
+  <!-- PREMIUM TARIFF SECTION -->
+  <section class="tariff-section" id="tariff">
+    <div class="wrap">
+
+      <div class="tariff-heading">
+        <div>
+          <div class="tariff-label">12 SEATER • RATE CARD</div>
+          <h2>Transparent pricing.<br>Comfortable journeys.</h2>
+          <p>
+            Review the reference rates for local packages and outstation
+            travel before requesting your final quotation.
+          </p>
+        </div>
+        <div class="rg-currency-switch" data-rg-currency-switch role="group" aria-label="Choose price currency">
+          <button type="button" data-currency="INR" aria-pressed="true">₹ INR</button>
+          <button type="button" data-currency="USD" aria-pressed="false">$ USD</button>
+        </div>
+      </div>
+      <p class="rg-currency-note">USD prices are estimates using the conversion rate configured in currency-switch.js.</p>
+
+      <div class="tariff-card">
+        <div class="tariff-card-top">
+          <div>
+            <h3>Local package tariff</h3>
+            <p>5 hours / 50 km package</p>
+          </div>
+          <span class="rate-pill">12 SEATER</span>
+        </div>
+
+        <div class="tariff-table-wrap">
+          <table class="tariff-table">
+            <thead>
+              <tr>
+                <th scope="col">Package / charge</th>
+                <th scope="col">Non-AC</th>
+                <th scope="col">AC</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">5 hours / 50 km</th>
+                <td><span class="rate-number" data-rg-price data-inr="2200">₹2,200</span></td>
+                <td><span class="rate-number" data-rg-price data-inr="2500">₹2,500</span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Extra hour</th>
+                <td><span class="rate-number" data-rg-price data-inr="400">₹400</span></td>
+                <td><span class="rate-number" data-rg-price data-inr="500">₹500</span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Outstation rate</th>
+                <td>
+                  <span class="rate-number" data-rg-price data-inr="21">₹21</span>
+                  <span class="rate-unit">per km</span>
+                </td>
+                <td>
+                  <span class="rate-number" data-rg-price data-inr="22">₹22</span>
+                  <span class="rate-unit">per km</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tariff-footnote">
+          <strong>Please note:</strong>
+          The local package is shown as 5 hours / 50 km.
+          Confirm additional kilometre charges, minimum outstation kilometres,
+          tolls, parking, permits and taxes with the booking team.
+        </div>
+      </div>
+
+      <div class="tariff-allowances">
+        <article class="allowance-card">
+          <span>Driver allowance</span>
+          <strong data-rg-price data-inr="700">₹700</strong>
+          <p>
+            Confirm whether this is charged per day or per trip and whether
+            it is included in any package.
+          </p>
+        </article>
+
+        <article class="allowance-card">
+          <span>Hill-station round-trip charge</span>
+          <strong data-rg-price data-inr="1500">₹1,500</strong>
+          <p>
+            Confirm the applicable route, conditions and whether this charge
+            is additional to the per-kilometre tariff.
+          </p>
+        </article>
+      </div>
+
+      <div class="tariff-cta">
+        <div>
+          <strong>Planning a trip from Chennai?</strong>
+          <p>
+            Send your travel date, route and passenger count to request
+            a quotation for the correct vehicle.
+          </p>
+        </div>
+
+        <a class="gold-btn" href="#callback">Request a Quote →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VEHICLE FEATURES -->
+  <section class="section soft">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">ALL DETAILS</div>
+          <h2>Comfort, features & usage.</h2>
+        </div>
+        <p>
+          Vehicle configuration may vary. Confirm the actual seating,
+          amenities and availability with the booking team.
+        </p>
+      </div>
+
+      <div class="spec-grid">
+        <div class="spec-box">
+          <small>Capacity</small>
+          <strong>Up to 12 passengers</strong>
+        </div>
+
+        <div class="spec-box">
+          <small>Climate</small>
+          <strong>AC / non-AC rate options</strong>
+        </div>
+
+        <div class="spec-box">
+          <small>Interior</small>
+          <strong>Luxury-style seating</strong>
+        </div>
+
+        <div class="spec-box">
+          <small>Entertainment</small>
+          <strong>Music system</strong>
+        </div>
+
+        <div class="spec-box">
+          <small>Lighting</small>
+          <strong>DJ lights on selected vehicles</strong>
+        </div>
+
+        <div class="spec-box">
+          <small>Best for</small>
+          <strong>Friends, family, corporate and tours</strong>
+        </div>
+
+        <div class="spec-box">
+          <small>Luggage</small>
+          <strong>Confirm space for your luggage</strong>
+        </div>
+
+        <div class="spec-box">
+          <small>Booking</small>
+          <strong>Subject to vehicle availability</strong>
+        </div>
+      </div>
+
+      <div class="use-strip">
+        <div>
+          <b>Friends & Family</b>
+          <span>Private tours, holidays and pilgrimages</span>
+        </div>
+
+        <div>
+          <b>Corporate</b>
+          <span>Office outings, team travel and events</span>
+        </div>
+
+        <div>
+          <b>Events</b>
+          <span>Weddings, functions and group movement</span>
+        </div>
+
+        <div>
+          <b>Outstation Tours</b>
+          <span>Multi-day routes and group journeys</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALLBACK FORM -->
+  <section class="callback section" id="callback">
+    <div class="wrap callback-grid">
+
+      <div>
+        <div class="kicker">REQUEST A CALLBACK</div>
+        <h2>Want us to call you?</h2>
+        <p>
+          Enter your contact details and preferred date. Your request will
+          open as a WhatsApp message for the booking team.
+        </p>
+
+        <div class="callback-points">
+          <span>✓ Customer phone number</span>
+          <span>✓ Vehicle and passenger count</span>
+          <span>✓ Preferred travel date</span>
+        </div>
+      </div>
+
+      <form class="callback-form" onsubmit="return sendCallback(this)">
+        <input type="hidden" name="context" value="12 Seater Urbania">
+
+        <div>
+          <label for="customerName">Name</label>
+          <input id="customerName" name="name" required placeholder="Your name">
+        </div>
+
+        <div>
+          <label for="customerPhone">Phone / WhatsApp</label>
+          <input id="customerPhone" name="phone" type="tel"
+                 required placeholder="+91 90000 00000">
+        </div>
+
+        <div>
+          <label for="travelDate">Preferred date</label>
+          <input id="travelDate" name="date" type="date" required>
+        </div>
+
+        <div>
+          <label for="travellers">Travellers</label>
+          <input id="travellers" name="travellers" type="number"
+                 min="1" max="12" placeholder="12">
+        </div>
+
+        <div>
+          <label for="tripRoute">Destination / route</label>
+          <input id="tripRoute" name="destination"
+                 placeholder="Example: Chennai to Madurai">
+        </div>
+
+        <div>
+          <label for="airConditioning">AC preference</label>
+          <select id="airConditioning" name="acPreference">
+            <option value="AC">AC</option>
+            <option value="Non-AC">Non-AC</option>
+            <option value="Need advice">Please advise</option>
+          </select>
+        </div>
+
+        <button class="gold-btn" type="submit">
+          Request Callback →
+        </button>
+
+        <small>
+          Submitting opens WhatsApp. The request is sent only after you
+          review and send the message in WhatsApp.
+        </small>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+
+    <div>
+      <a class="brand" href="../../index.html">
+        <span class="logo">RG</span>
+        <span>
+          <b>Travels in Chennai</b>
+          <small>CHENNAI • TRAVEL TOGETHER</small>
+        </span>
+      </a>
+
+      <p>
+        Private group travel from Chennai for family trips, corporate travel,
+        tours, events and outstation journeys.
+      </p>
+    </div>
+
+    <div>
+      <h4>Explore</h4>
+      <a href="../../index.html#fleet">Fleet</a>
+      <a href="../../index.html#trips">Trips</a>
+      <a href="../../index.html#tariff">Tariff</a>
+    </div>
+
+    <div>
+      <h4>Bookings</h4>
+      <a href="tel:+919003085856">+91 90030 85856</a>
+      <a href="https://wa.me/919003085856"
+         target="_blank" rel="noopener">WhatsApp</a>
+      <p>Chennai, Tamil Nadu</p>
+    </div>
+
+  </div>
+
+  <div class="wrap footline">
+    <span>© 2026 Travels in Chennai</span>
+    <span>Premium Group Travel • Chennai</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="../../js/currency-switch.js" defer></script>
+  <script src="../../js/details.js" defer></script>
+
+</body>
+</html>
