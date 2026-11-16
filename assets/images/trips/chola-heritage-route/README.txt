@@ -1,0 +1,1 @@
+Replace the 4 recommended trip image slots with real destination photographs: hero-01.jpg, hero-02.jpg, place-01.jpg, place-02.jpg. The page falls back to the shared route image when a slot is missing.
