@@ -7,7 +7,44 @@ const vehicleData={
  '25 Seater':{img:'assets/images/tempo-side.jpg',title:'25 Seater Tempo Traveller',lead:'High-capacity Tempo Traveller option for larger groups, events, tours and corporate movement.',chips:['AC options','Group comfort','Music system'],specs:[['Capacity','25 passengers'],['Climate','AC options'],['Interior','Group comfort'],['Entertainment','Music system'],['Use','Tours • Corporate • Events'],['Booking','Subject to availability']]}
 };
 const rates=[{vehicle:'12 Seater',nonac:21,ac:22},{vehicle:'14 Seater',nonac:21,ac:22},{vehicle:'16 Seater',nonac:25,ac:26},{vehicle:'18 Seater',nonac:25,ac:26},{vehicle:'21 Seater',nonac:24,ac:28},{vehicle:'25 Seater',nonac:28,ac:30}];let currency='INR';const USD_RATE=.011;function money(v){return currency==='INR'?'₹'+v.toFixed(0)+'/km':'$'+(v*USD_RATE).toFixed(2)+'/km'}function renderRates(){document.getElementById('rateBody').innerHTML=rates.map(r=>`<tr><td data-label="Vehicle"><strong>${r.vehicle}</strong></td><td class="price" data-label="Non-AC">${money(r.nonac)}</td><td class="price" data-label="AC">${money(r.ac)}</td></tr>`).join('');inrBtn.classList.toggle('active',currency==='INR');usdBtn.classList.toggle('active',currency==='USD');inrBtn.setAttribute('aria-pressed',String(currency==='INR'));usdBtn.setAttribute('aria-pressed',String(currency==='USD'))}function setCurrency(c){if(c!=='INR'&&c!=='USD')return;currency=c;renderRates()}
-function toggleMenu(){mobileMenu.classList.toggle('open')}function closeMenu(){mobileMenu.classList.remove('open')}function setDestination(v){destinationInput.value=v;document.getElementById('booking').scrollIntoView({behavior:'smooth'});setTimeout(()=>destinationInput.focus({preventScroll:true}),450)}function bookVehicle(v){bookingVehicle.value=v;destinationInput.scrollIntoView({behavior:'smooth',block:'center'});showToast(v+' selected — add your date and details below')}function sendWhatsApp(form){const d=new FormData(form);const msg=`RG Tempo Traveller Booking Request\n\nName: ${d.get('name')||'-'}\nPhone: ${d.get('phone')||'-'}\nTravel Date: ${d.get('date')||'-'}\nTravellers: ${d.get('travellers')||'-'}\nVehicle: ${d.get('vehicle')||'-'}\nTrip Type: ${d.get('tripType')||'-'}\nDestination: ${d.get('destination')||'-'}\nPickup: ${d.get('pickup')||'Chennai'}\nRequirements: ${d.get('message')||'-'}`;window.open('https://wa.me/919003085856?text='+encodeURIComponent(msg),'_blank');return false}
+function toggleMenu(){mobileMenu.classList.toggle('open')}function closeMenu(){mobileMenu.classList.remove('open')}function setDestination(v){destinationInput.value=v;document.getElementById('booking').scrollIntoView({behavior:'smooth'});setTimeout(()=>destinationInput.focus({preventScroll:true}),450)}function bookVehicle(v){bookingVehicle.value=v;destinationInput.scrollIntoView({behavior:'smooth',block:'center'});showToast(v+' selected — add your date and details below')}function sendWhatsApp(form){const d=new FormData(form);const msg=`RG Travel Hub — Booking Request
+
+Name: ${d.get('name')||'-'}
+WhatsApp / Phone: ${d.get('phone')||'-'}
+Travel Date: ${d.get('date')||'-'}
+Destination: ${d.get('destination')||'-'}
+Pickup: Chennai`;window.open('https://wa.me/919003085856?text='+encodeURIComponent(msg),'_blank','noopener');return false}
+
+/* Destination autocomplete for the four-field booking form. */
+(function(){
+ const input=document.getElementById('destinationInput');
+ const list=document.getElementById('destinationSuggestions');
+ if(!input||!list)return;
+ const places=['Kerala, India','Kochi, Kerala','Munnar, Kerala','Alleppey, Kerala','Kumarakom, Kerala','Thekkady, Kerala','Wayanad, Kerala','Kovalam, Kerala','Sabarimala, Kerala','Sabarimala Temple, Kerala','Sabarigiri, Kerala','Pamba, Kerala','Ooty, Tamil Nadu','Kodaikanal, Tamil Nadu','Yercaud, Tamil Nadu','Kolli Hills, Tamil Nadu','Rameswaram, Tamil Nadu','Madurai, Tamil Nadu','Kanyakumari, Tamil Nadu','Bengaluru, Karnataka','Mysuru, Karnataka','Coorg, Karnataka','Chikmagalur, Karnataka','Hyderabad, Telangana','Tirupati, Andhra Pradesh','Goa, India'];
+ let active=-1;
+ function close(){list.classList.remove('open');list.innerHTML='';input.setAttribute('aria-expanded','false');active=-1}
+ function choose(value){input.value=value;close();input.focus()}
+ function render(){
+  const q=input.value.trim().toLocaleLowerCase();
+  if(q.length<2){close();return}
+  const matches=places.filter(p=>p.toLocaleLowerCase().startsWith(q)||p.toLocaleLowerCase().split(/[, ]+/).some(part=>part.startsWith(q))).slice(0,6);
+  if(!matches.length){close();return}
+  list.innerHTML=matches.map((p,i)=>'<button type="button" role="option" aria-selected="'+(i===0?'true':'false')+'" data-place="'+p.replace(/&/g,'&amp;').replace(/"/g,'&quot;')+'"><span aria-hidden="true">⌖</span>'+p+'</button>').join('');
+  list.classList.add('open');input.setAttribute('aria-expanded','true');active=-1;
+ }
+ input.addEventListener('input',render);input.addEventListener('focus',render);
+ list.addEventListener('click',e=>{const b=e.target.closest('button[data-place]');if(b)choose(b.dataset.place)});
+ input.addEventListener('keydown',e=>{
+  const options=[...list.querySelectorAll('button')];
+  if(e.key==='ArrowDown'&&options.length){e.preventDefault();active=Math.min(active+1,options.length-1);options.forEach((o,i)=>o.setAttribute('aria-selected',i===active?'true':'false'))}
+  else if(e.key==='ArrowUp'&&options.length){e.preventDefault();active=Math.max(active-1,0);options.forEach((o,i)=>o.setAttribute('aria-selected',i===active?'true':'false'))}
+  else if(e.key==='Enter'&&active>=0&&options[active]){e.preventDefault();choose(options[active].dataset.place)}
+  else if(e.key==='Escape')close();
+ });
+ document.addEventListener('click',e=>{if(!e.target.closest('.rg-destination-wrap'))close()});
+ const date=document.getElementById('bookingDate');
+ if(date){const today=new Date();date.min=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10)}
+})();
 function openVehicle(name){const v=vehicleData[name];if(!v)return;detailImg.src=v.img;detailImg.alt=v.title;detailBadge.textContent=name.toUpperCase();detailTitle.textContent=v.title;detailLead.textContent=v.lead;detailChips.innerHTML=v.chips.map(x=>`<span class="spec">${x}</span>`).join('');detailList.innerHTML=v.specs.map(x=>`<div><b>${x[0]}</b>${x[1]}</div>`).join('');detailBook.dataset.vehicle=name;vehicleModal.classList.add('open');document.body.classList.add('modal-open')}function closeVehicle(e){if(e&&e.target!==vehicleModal)return;vehicleModal.classList.remove('open');document.body.classList.remove('modal-open')}function bookVehicleFromModal(){const v=detailBook.dataset.vehicle;closeVehicle();bookVehicle(v)}function showToast(t){toast.textContent=t;toast.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>toast.classList.remove('show'),2200)}
 const slides=[...document.querySelectorAll('.hero-slide')],dots=[...document.querySelectorAll('.dot')];let slideIndex=0,heroTimer;function goSlide(i){slideIndex=i;slides.forEach((s,n)=>s.classList.toggle('active',n===i));dots.forEach((d,n)=>d.classList.toggle('active',n===i));slideCount.textContent=`0${i+1} / 04`;clearInterval(heroTimer);heroTimer=setInterval(()=>goSlide((slideIndex+1)%slides.length),5200)}heroTimer=setInterval(()=>goSlide((slideIndex+1)%slides.length),5200);
 function scrollSnap(id,dir){document.getElementById(id).scrollBy({left:dir*(document.getElementById(id).clientWidth*.78),behavior:'smooth'})}
