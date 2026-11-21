@@ -139,237 +139,23 @@
 }
 @media(prefers-reduced-motion:reduce){#booking .rg-call-btn{animation:none}#booking .rg-submit-btn,#booking .rg-call-btn{transition:none}}
 </style>
-</head>
-<body>
-<header class="nav rg-nav"><div class="container navin"><a class="brand rg-brand" href="#home" aria-label="Team RG Travel Hub home"><img class="rg-logo" src="assets/images/team-rg-logo.svg" alt="TEAM RG Travel Hub — A Travel in Chennai"></a><nav class="links"><a href="#fleet">Fleet</a><a href="#tempo-gallery">Vehicle Gallery</a><a href="#trips">Trips</a><a href="#cities">Destinations</a><a href="#tariff">Tariff</a><a href="#booking">Contact</a><a class="btn rg-book-nav" href="#booking"><span aria-hidden="true">▣</span> Book a Tempo</a></nav><button class="menu" onclick="toggleMenu()" aria-label="Open menu">☰</button><div class="mobile-menu" id="mobileMenu"><a href="#fleet" onclick="closeMenu()">Fleet</a><a href="#tempo-gallery" onclick="closeMenu()">Vehicle Gallery</a><a href="#trips" onclick="closeMenu()">Trips</a><a href="#cities" onclick="closeMenu()">Destinations</a><a href="#tariff" onclick="closeMenu()">Tariff</a><a href="#booking" onclick="closeMenu()">Book a Tempo</a></div></div></header>
-<main id="home">
-<section class="hero"><div class="hero-shell"><div class="hero-slide active" style="background-image:url('assets/images/site/hero-main.png')"></div><div class="hero-slide" style="background-image:url('assets/images/site/tempo.jpg')"></div><div class="hero-slide" style="background-image:url('assets/images/site/tamilnadu-tour.jpg')"></div><div class="hero-slide" style="background-image:url('assets/images/site/rameswaram.jpg')"></div><div class="container hero-content"><div class="hero-copy"><span class="eyebrow"><i></i> PREMIUM TEMPO TRAVELLER RENTALS</span><h1>Travel together.<br><em>Travel beautifully.</em></h1><p>Tempo Travellers&nbsp; | &nbsp;Group Trips&nbsp; | &nbsp;Family Tours&nbsp; | &nbsp;Outstation Travel</p><div class="hero-actions"><a class="btn rg-yellow-btn" href="#booking"><span aria-hidden="true">▦</span> Book a Tempo</a><a class="btn rg-whatsapp-btn" href="https://wa.me/919003085856?text=Hello%20Team%20RG%2C%20I%20need%20a%20travel%20enquiry." target="_blank" rel="noopener"><span aria-hidden="true">◉</span> WhatsApp Enquiry</a></div></div></div><div class="container hero-bottom"><span class="hero-count" id="slideCount">01 / 04</span><div class="dots"><button class="dot active" onclick="goSlide(0)"></button><button class="dot" onclick="goSlide(1)"></button><button class="dot" onclick="goSlide(2)"></button><button class="dot" onclick="goSlide(3)"></button></div><span class="scroll-cue">Scroll to explore</span></div></div></section>
-</div></div></section>
-<section id="fleet" class="cream reveal"><div class="container"><div class="rg-fleet-heading"><div class="kicker"><span></span> RG PREMIUM FLEET <span></span></div><h2>One fleet. Every <em>journey.</em></h2><p>Safe • Comfortable • Reliable Travel in Chennai</p></div><div class="rg-fleet-benefits"><div><b>♟</b><span>Group Travel</span></div><div><b>✓</b><span>Well Maintained</span></div><div><b>✦</b><span>Experienced Drivers</span></div><div><b>⌖</b><span>Tamil Nadu Trips</span></div></div><div class="rg-vehicles-heading"><span></span><h3>Our Vehicles</h3><span></span></div><div class="slider-shell"><div class="snap" id="fleetSnap"><article class="vehicle-card clickable-card" data-link="pages/vehicles/5-seater.html" tabindex="0" role="link"><div class="vehicle-photo"><img src="assets/images/vehicles/5-seater/exterior-01.jpg" alt="Ciaz Sedan"><span class="seat-badge">5 SEATER</span><span class="vehicle-type">SEDAN • AC</span></div><div class="vehicle-body"><h3>Ciaz Sedan</h3><p>Premium sedan option for couples, families and small private trips.</p><div class="spec-row"><span class="spec">AC</span><span class="spec">Comfort seats</span><span class="spec">Private travel</span></div><div class="vehicle-actions"><button class="btn dark" onclick="window.location.href='pages/vehicles/5-seater.html'">View Details</button><button class="btn outline" onclick="bookVehicle('Ciaz Sedan')">Book</button></div></div></article><article class="vehicle-card clickable-card" data-link="pages/vehicles/7-seater.html" tabindex="0" role="link"><div class="vehicle-photo"><img src="assets/images/vehicles/7-seater/exterior-01.jpg" alt="Innova"><span class="seat-badge">7 SEATER</span><span class="vehicle-type">MPV • AC</span></div><div class="vehicle-body"><h3>Innova</h3><p>Comfortable family and small-group option for city travel and outstation journeys.</p><div class="spec-row"><span class="spec">AC</span><span class="spec">Comfort seating</span><span class="spec">Family travel</span></div><div class="vehicle-actions"><button class="btn dark" onclick="window.location.href='pages/vehicles/7-seater.html'">View Details</button><button class="btn outline" onclick="bookVehicle('Innova')">Book</button></div></div></article><article class="vehicle-card clickable-card" data-link="pages/vehicles/12-seater.html" tabindex="0" role="link"><div class="vehicle-photo"><img src="assets/images/site/vehicle-gallery/tempo-exterior-01.jpg" alt="12 Seater Urbania"><span class="seat-badge">12 SEATER</span><span class="vehicle-type">URBANIA • PREMIUM</span></div><div class="vehicle-body"><h3>Urbania 12 Seater</h3><p>Premium small-group option for friends, family, tours and corporate travel.</p><div class="spec-row"><span class="spec">AC</span><span class="spec">Luxury seats</span><span class="spec">Music system</span></div><div class="vehicle-actions"><button class="btn dark" onclick="window.location.href='pages/vehicles/12-seater.html'">View Details</button><button class="btn outline" onclick="bookVehicle('Urbania 12 Seater')">Book</button></div></div></article><article class="vehicle-card clickable-card" data-link="pages/vehicles/14-seater.html" tabindex="0" role="link"><div class="vehicle-photo"><img src="assets/images/site/vehicle-gallery/tempo-exterior-02.jpg" alt="14 Seater Tempo Traveller"><span class="seat-badge">14 SEATER</span><span class="vehicle-type">TEMPO • AC</span></div><div class="vehicle-body"><h3>14 Seater</h3><p>Balanced capacity for private tours, corporate groups and event travel.</p><div class="spec-row"><span class="spec">AC options</span><span class="spec">Comfort seats</span><span class="spec">Music</span></div><div class="vehicle-actions"><button class="btn dark" onclick="window.location.href='pages/vehicles/14-seater.html'">View Details</button><button class="btn outline" onclick="bookVehicle('14 Seater')">Book</button></div></div></article><article class="vehicle-card clickable-card" data-link="pages/vehicles/17-seater.html" tabindex="0" role="link"><div class="vehicle-photo"><img src="assets/images/vehicles/17-seater/exterior-01.jpg" alt="17 Seater Urbania"><span class="seat-badge">17 SEATER</span><span class="vehicle-type">URBANIA • PREMIUM</span></div><div class="vehicle-body"><h3>Urbania 17 Seater</h3><p>Premium group transport for larger families, tours, corporate travel and events.</p><div class="spec-row"><span class="spec">AC</span><span class="spec">Comfort seats</span><span class="spec">Music system</span></div><div class="vehicle-actions"><button class="btn dark" onclick="window.location.href='pages/vehicles/17-seater.html'">View Details</button><button class="btn outline" onclick="bookVehicle('Urbania 17 Seater')">Book</button></div></div></article><article class="vehicle-card clickable-card" data-link="pages/vehicles/18-seater.html" tabindex="0" role="link"><div class="vehicle-photo"><img src="assets/images/site/tempo-side.jpg" alt="18 Seater Tempo Traveller"><span class="seat-badge">18 SEATER</span><span class="vehicle-type">TEMPO • AC</span></div><div class="vehicle-body"><h3>18 Seater</h3><p>Comfortable group transport for corporate travel, tours and events.</p><div class="spec-row"><span class="spec">AC options</span><span class="spec">Music system</span><span class="spec">Event ready</span></div><div class="vehicle-actions"><button class="btn dark" onclick="window.location.href='pages/vehicles/18-seater.html'">View Details</button><button class="btn outline" onclick="bookVehicle('18 Seater')">Book</button></div></div></article><article class="vehicle-card clickable-card" data-link="pages/vehicles/21-seater.html" tabindex="0" role="link"><div class="vehicle-photo"><img src="assets/images/vehicles/21-seater/exterior-01.jpg" alt="21 Seater Tempo Traveller"><span class="seat-badge">21 SEATER</span><span class="vehicle-type">TEMPO • GROUP</span></div><div class="vehicle-body"><h3>21 Seater</h3><p>Large-capacity option for extended tours, corporate teams and group events.</p><div class="spec-row"><span class="spec">AC options</span><span class="spec">Comfort seats</span><span class="spec">Music</span></div><div class="vehicle-actions"><button class="btn dark" onclick="window.location.href='pages/vehicles/21-seater.html'">View Details</button><button class="btn outline" onclick="bookVehicle('21 Seater')">Book</button></div></div></article><article class="vehicle-card clickable-card" data-link="pages/vehicles/25-seater.html" tabindex="0" role="link"><div class="vehicle-photo"><img src="assets/images/vehicles/25-seater/exterior-01.jpg" alt="25 Seater Tempo Traveller"><span class="seat-badge">25 SEATER</span><span class="vehicle-type">TEMPO • EVENTS</span></div><div class="vehicle-body"><h3>25 Seater</h3><p>Maximum-capacity option for big groups, events, tours and corporate movement.</p><div class="spec-row"><span class="spec">AC options</span><span class="spec">Group comfort</span><span class="spec">Music</span></div><div class="vehicle-actions"><button class="btn dark" onclick="window.location.href='pages/vehicles/25-seater.html'">View Details</button><button class="btn outline" onclick="bookVehicle('25 Seater')">Book</button></div></div></article></div><div class="slider-controls"><span class="scroll-hint">Auto-moving • hover or touch to pause</span><div class="arrows"><button class="arrow" onclick="scrollSnap('fleetSnap',-1)">←</button><button class="arrow" onclick="scrollSnap('fleetSnap',1)">→</button></div></div><div class="rg-fleet-actions"><a class="btn rg-fleet-view" href="#tempo-gallery">View Fleet</a><a class="btn rg-fleet-whatsapp" href="https://wa.me/919003085856?text=Hello%20Team%20RG%2C%20I%20need%20a%20vehicle%20enquiry." target="_blank" rel="noopener">WhatsApp Enquiry</a></div></div></div></section>
-<section id="tempo-gallery" class="reveal rg-tempo-gallery">
-<div class="container">
-  <div class="rg-gallery-heading">
-    <div>
-      <div class="rg-gallery-kicker"><span></span>TEMPO GALLERY</div>
-      <h2>Explore Our <em>Tempo Travellers</em></h2>
-      <p>A closer look at comfort, space and travel-ready features.</p>
-    </div>
-    <div class="rg-gallery-count"><strong>08</strong><span>GALLERY<br>VIEWS</span></div>
-  </div>
-  <div class="gallery-wrap rg-gallery-wrap">
-    <div class="gallery-snap auto-snap rg-gallery-snap" id="gallerySnap">
-      <article class="gallery-card rg-gallery-card"><img src="assets/images/site/vehicle-gallery/tempo-interior-01.jpg" alt="Spacious Tempo Traveller seating and interior"><div class="gallery-copy"><small>INTERIOR</small><h3>Spacious Seating</h3><p>Comfort for every passenger.</p></div></article>
-      <article class="gallery-card rg-gallery-card"><img src="assets/images/site/vehicle-gallery/tempo-music-01.jpg" alt="Tempo Traveller music and entertainment system"><div class="gallery-copy"><small>ENTERTAINMENT</small><h3>Music &amp; Entertainment</h3><p>Enjoy every mile.</p></div></article>
-      <article class="gallery-card rg-gallery-card"><img src="assets/images/site/vehicle-gallery/tempo-exterior-01.jpg" alt="TEAM RG premium Tempo Traveller exterior"><div class="gallery-copy"><small>EXTERIOR</small><h3>Premium Tempo Design</h3><p>Ready for every journey.</p></div></article>
-      <article class="gallery-card rg-gallery-card"><img src="assets/images/site/vehicle-gallery/tempo-exterior-02.jpg" alt="Tempo Traveller side profile"><div class="gallery-copy"><small>EXTERIOR</small><h3>Distinctive Side Profile</h3><p>A closer look at the vehicle finish.</p></div></article>
-      <article class="gallery-card rg-gallery-card"><img src="assets/images/site/vehicle-gallery/tempo-interior-02.jpg" alt="Tempo Traveller cabin and interior seats"><div class="gallery-copy"><small>SEATING</small><h3>Comfortable Cabin</h3><p>Space to sit back and relax.</p></div></article>
-      <article class="gallery-card rg-gallery-card"><img src="assets/images/site/vehicle-gallery/tempo-seats-01.jpg" alt="Tempo Traveller premium seat details"><div class="gallery-copy"><small>COMFORT</small><h3>Seat Details</h3><p>Thoughtful comfort on the road.</p></div></article>
-      <article class="gallery-card rg-gallery-card"><img src="assets/images/site/vehicle-gallery/tempo-dj-01.jpg" alt="Tempo Traveller DJ lighting"><div class="gallery-copy"><small>EVENT READY</small><h3>DJ Lighting</h3><p>Extra atmosphere for special trips.</p></div></article>
-      <article class="gallery-card rg-gallery-card"><img src="assets/images/site/vehicle-gallery/tempo-luggage-01.jpg" alt="Tempo Traveller luggage storage"><div class="gallery-copy"><small>TRAVEL PRACTICAL</small><h3>Luggage Space</h3><p>Room for your travel essentials.</p></div></article>
-    </div>
-    <div class="rg-gallery-footer">
-      <span class="rg-gallery-hint"><span class="rg-gallery-dot"></span>Swipe to explore the gallery</span>
-      <div class="arrows"><button class="arrow" aria-label="Previous gallery images" onclick="scrollSnap('gallerySnap',-1)">←</button><button class="arrow" aria-label="Next gallery images" onclick="scrollSnap('gallerySnap',1)">→</button></div>
-    </div>
-  </div>
-</div>
-</section>
-<section id="trips" class="reveal"><div class="container"><div class="section-head"><div><div class="kicker">SIGNATURE TRIPS</div><h2>Routes built around the way you travel.</h2></div><p></p></div><div class="trip-region-note"><span class="trip-region active">TAMIL NADU</span><span class="trip-region">KARNATAKA</span><span class="trip-region">KERALA</span><span class="trip-region">CUSTOM ROUTES</span></div><div class="snap auto-snap" id="tripSnap"><article class="dest-card clickable-card" data-link="pages/trips/madurai-temple-escape.html" tabindex="0" role="link"><img src="assets/images/site/madurai.jpg" alt="Madurai Temple Escape"><div class="dest-copy"><span class="tag">3 DAYS • 2 NIGHTS</span><h3>Madurai Temple Escape</h3><p>Chennai → Madurai → temple & heritage sightseeing → return.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/madurai-rameswaram.html" tabindex="0" role="link"><img src="assets/images/site/rameswaram.jpg" alt="Madurai + Rameswaram"><div class="dest-copy"><span class="tag">4 DAYS • 3 NIGHTS</span><h3>Madurai + Rameswaram</h3><p>Temple visits, coastal highlights and private group travel.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/chola-heritage-route.html" tabindex="0" role="link"><img src="assets/images/site/thanjavur.jpg" alt="Chola Heritage Route"><div class="dest-copy"><span class="tag">5 DAYS • HERITAGE</span><h3>Chola Heritage Route</h3><p>Thanjavur, Kumbakonam and heritage temple destinations.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/tiruvannamalai-circuit.html" tabindex="0" role="link"><img src="assets/images/site/tiruvannamalai.jpg" alt="Tiruvannamalai Circuit"><div class="dest-copy"><span class="tag">3 DAYS • 2 NIGHTS</span><h3>Tiruvannamalai Circuit</h3><p>Arunachaleswarar Temple with flexible heritage stops.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/trichy-temple-trail.html" tabindex="0" role="link"><img src="assets/images/site/trichy.jpg" alt="Trichy &amp; Temple Trail"><div class="dest-copy"><span class="tag">CUSTOM GROUP TOUR</span><h3>Trichy & Temple Trail</h3><p>Srirangam, Rockfort and nearby heritage destinations.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/murugan-temple-circuit.html" tabindex="0" role="link"><img src="assets/images/site/murugan-tour.jpg" alt="Murugan Temple Circuit"><div class="dest-copy"><span class="tag">PILGRIMAGE</span><h3>Murugan Temple Circuit</h3><p>A flexible private pilgrimage itinerary around your preferred temples.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/coorg-coffee-waterfalls.html" tabindex="0" role="link"><img src="assets/images/destinations/coorg-01.jpg" onerror="this.onerror=null;this.src='assets/images/destinations/coorg-01.svg'" alt="Coorg Coffee &amp; Waterfalls"><div class="dest-copy"><span class="tag">3 DAYS • 2 NIGHTS</span><h3>Coorg Coffee & Waterfalls</h3><p>Madikeri, Abbey Falls, Raja’s Seat and coffee-country views.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/chikmagalur-hills.html" tabindex="0" role="link"><img src="assets/images/destinations/chikmagalur-01.jpg" onerror="this.onerror=null;this.src='assets/images/destinations/chikmagalur-01.svg'" alt="Chikmagalur Hills Escape"><div class="dest-copy"><span class="tag">3 DAYS • 2 NIGHTS</span><h3>Chikmagalur Hills Escape</h3><p>Mullayanagiri, Baba Budangiri, coffee trails and waterfalls.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/mysuru-royal-heritage.html" tabindex="0" role="link"><img src="assets/images/destinations/mysuru-01.jpg" onerror="this.onerror=null;this.src='assets/images/destinations/mysuru-01.svg'" alt="Mysuru Royal Heritage"><div class="dest-copy"><span class="tag">3 DAYS • 2 NIGHTS</span><h3>Mysuru Royal Heritage</h3><p>Mysuru Palace, markets, Chamundi Hills and heritage sights.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/hampi-heritage.html" tabindex="0" role="link"><img src="assets/images/destinations/hampi-01.jpg" onerror="this.onerror=null;this.src='assets/images/destinations/hampi-01.svg'" alt="Hampi Heritage Journey"><div class="dest-copy"><span class="tag">4 DAYS • 3 NIGHTS</span><h3>Hampi Heritage Journey</h3><p>A focused heritage route through the Vijayanagara landscape.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/munnar-tea-hills.html" tabindex="0" role="link"><img src="assets/images/destinations/munnar-01.jpg" onerror="this.onerror=null;this.src='assets/images/destinations/munnar-01.svg'" alt="Munnar Tea Hills"><div class="dest-copy"><span class="tag">4 DAYS • 3 NIGHTS</span><h3>Munnar Tea Hills</h3><p>Tea estates, viewpoints, Mattupetty and Eravikulam area.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/alleppey-backwaters.html" tabindex="0" role="link"><img src="assets/images/destinations/alleppey-01.jpg" onerror="this.onerror=null;this.src='assets/images/destinations/alleppey-01.svg'" alt="Alleppey Backwater Escape"><div class="dest-copy"><span class="tag">4 DAYS • 3 NIGHTS</span><h3>Alleppey Backwater Escape</h3><p>Backwaters, houseboat experience, Kuttanad and coastal stops.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/wayanad-nature-trail.html" tabindex="0" role="link"><img src="assets/images/destinations/wayanad-01.jpg" onerror="this.onerror=null;this.src='assets/images/destinations/wayanad-01.svg'" alt="Wayanad Nature Trail"><div class="dest-copy"><span class="tag">4 DAYS • 3 NIGHTS</span><h3>Wayanad Nature Trail</h3><p>Pookode Lake, viewpoints, caves and waterfall country.</p><span class="btn dark">Plan This Tour</span></div></article><article class="dest-card clickable-card" data-link="pages/trips/thekkady-wildlife.html" tabindex="0" role="link"><img src="assets/images/destinations/thekkady-01.jpg" onerror="this.onerror=null;this.src='assets/images/destinations/thekkady-01.svg'" alt="Thekkady Wildlife Escape"><div class="dest-copy"><span class="tag">4 DAYS • 3 NIGHTS</span><h3>Thekkady Wildlife Escape</h3><p>Periyar landscape, lake experience and spice-country stops.</p><span class="btn dark">Plan This Tour</span></div></article></div><div class="slider-controls"><span class="scroll-hint">Auto-moving route showcase • click anywhere on a tour card</span><div class="arrows"><button class="arrow" onclick="scrollSnap('tripSnap',-1)">←</button><button class="arrow" onclick="scrollSnap('tripSnap',1)">→</button></div></div></div></section>
-
-<section id="occasions" class="occasion-section reveal"><div class="container">
-  <div class="occasion-heading">
-    <div class="occasion-kicker"><span></span> MADE FOR YOUR</div>
-    <h2><em>Occasion</em></h2>
-    <p>One vehicle. Many reasons to travel.</p>
-    <div class="occasion-route" aria-hidden="true"><span class="route-van">▰</span><i></i><span class="route-pin">●</span></div>
-  </div>
-  <div class="usecases occasion-grid">
-    <article class="use-card occasion-card occasion-family">
-      <div class="occasion-art" aria-hidden="true"><img class="occasion-cover" src="assets/images/site/occasions/friends-family-cover.webp" alt="" loading="lazy"><span class="occasion-art-icon">♧</span><span class="occasion-art-label">TOGETHER IS THE BEST WAY</span></div>
-      <div class="occasion-card-body"><span class="use-icon">01</span><h3>Friends &amp; <b>Family</b></h3>
-      <p>Keep everyone together for holidays, temple trips, weekend getaways and long drives.</p>
-      <ul><li>Private group travel</li><li>Music &amp; entertainment options</li><li>Flexible route planning</li></ul></div>
-    </article>
-    <article class="use-card occasion-card occasion-corporate">
-      <div class="occasion-art" aria-hidden="true"><img class="occasion-cover" src="assets/images/site/occasions/corporate-travel-cover.webp" alt="" loading="lazy"><span class="occasion-art-icon">▤</span><span class="occasion-art-label">TRAVEL AS ONE TEAM</span></div>
-      <div class="occasion-card-body"><span class="use-icon">02</span><h3>Corporate <b>Travel</b></h3>
-      <p>Reliable group movement for office outings, conferences, airport transfers and team events.</p>
-      <ul><li>Pickup &amp; drop coordination</li><li>Multiple group sizes</li><li>Customised schedules</li></ul></div>
-    </article>
-    <article class="use-card occasion-card occasion-events">
-      <div class="occasion-art" aria-hidden="true"><img class="occasion-cover" src="assets/images/site/occasions/events-tours-cover.webp" alt="" loading="lazy"><span class="occasion-art-icon">✧</span><span class="occasion-art-label">MAKE EVERY MOMENT COUNT</span></div>
-      <div class="occasion-card-body"><span class="use-icon">03</span><h3>Events &amp; <b>Tours</b></h3>
-      <p>Move guests and groups for weddings, functions, pilgrimages, tours and special occasions.</p>
-      <ul><li>12–25 seater options</li><li>Event-friendly interiors</li><li>Custom booking requests</li></ul></div>
-    </article>
-  </div>
-</div></section>
-<section id="tariff" class="cream reveal"><div class="container"><div class="tariff rg-rate-card"><div class="tariff-copy rg-rate-intro"><div class="kicker">STARTING RATE CARD</div><h2>Clear rates.<br><em>Flexible quotes.</em></h2><p>Indicative per-kilometre starting rates. Final pricing depends on route, date, minimum kilometres, tolls, permits and vehicle availability.</p><div class="rg-rate-note"><span class="rg-rate-note-dot"></span>Transparent pricing · Chennai pickup</div></div><div class="rg-rate-pricing"><div class="rg-rate-toolbar"><div><span class="rg-rate-eyebrow">CHOOSE YOUR CURRENCY</span><span class="rg-rate-hint">Rates shown per kilometre</span></div><div class="currency rg-currency-switch" role="group" aria-label="Choose currency"><button id="inrBtn" class="active" type="button" onclick="setCurrency('INR')" aria-pressed="true">₹ <span>INR</span></button><button id="usdBtn" type="button" onclick="setCurrency('USD')" aria-pressed="false">$ <span>USD</span></button></div></div><div class="table-wrap rg-rate-table-wrap"><table class="rg-rate-table"><thead><tr><th>Vehicle</th><th>Non-AC</th><th>AC</th></tr></thead><tbody id="rateBody"></tbody></table></div></div></div></div></section>
-<section id="booking" class="cream reveal"><div class="container">
-  <div class="banner" style="background-image:url('assets/images/site/tamilnadu-tour.jpg')">
-    <div class="banner-content">
-      <div class="kicker" style="color:#e3c47f">BOOK YOUR VEHICLE</div>
-      <h3>Tell us your date and destination.</h3>
-      <p>Share four quick details. We’ll prepare your booking request on WhatsApp.</p>
-    </div>
-  </div>
-  <div class="panel rg-booking-panel">
-    <div class="rg-booking-title">
-      <div class="kicker">TEAM RG TRAVEL HUB</div>
-      <h3>Book a Tempo</h3>
-      <p>Plan your journey in a few quick steps.</p>
-    </div>
-    <form class="form rg-booking-form" onsubmit="return sendWhatsApp(this)">
-      <div class="field"><label for="bookingName">Your name</label><input id="bookingName" name="name" placeholder="Enter your name" autocomplete="name" required></div>
-      <div class="field"><label for="bookingPhone">WhatsApp / Phone</label><input id="bookingPhone" name="phone" type="tel" placeholder="+91 mobile number" autocomplete="tel" inputmode="tel" required></div>
-      <div class="field"><label for="bookingDate">Travel date</label><input id="bookingDate" name="date" type="date" required></div>
-      <div class="field rg-destination-wrap"><label for="destinationInput">Destination</label><input id="destinationInput" name="destination" placeholder="Start typing a destination..." autocomplete="off" aria-autocomplete="list" aria-controls="destinationSuggestions" aria-expanded="false" required><div class="rg-destination-suggestions" id="destinationSuggestions" role="listbox" aria-label="Destination suggestions"></div></div>
-      <div class="rg-booking-actions" style="grid-column:1/-1">
-        <button class="btn rg-submit-btn" type="submit"><span aria-hidden="true">◉</span> Send Booking Request on WhatsApp <span aria-hidden="true">→</span></button>
-        <a class="rg-call-btn" href="tel:+919003085856"><span aria-hidden="true">☎</span> Call Now</a>
-      </div>
-    </form>
-  </div>
-</div></section> html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#ffffff">
-<title>Travels in Chennai | Premium Group Travel Chennai — V9</title>
-<meta name="description" content="Premium Tempo Traveller rentals from Chennai — 12, 14, 16, 18, 21 and 25 seaters for tours, corporate travel, events and private group journeys.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/rg-responsive-overrides.css">
-<link rel="stylesheet" href="css/team-rg-theme.css">
-
-
-<style id="rg-header-refresh">
-  /* Header-only refresh: compact white area, larger navigation text, no top strip */
-  .topbar { display: none !important; }
-  header.nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255,255,255,.97);
-    border-bottom: 1px solid rgba(17,31,49,.08);
-    box-shadow: 0 5px 22px rgba(13,27,44,.06);
-  }
-  header.nav .navin {
-    min-height: 82px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    gap: 24px;
-  }
-  header.nav .brand { gap: 13px; flex-shrink: 0; }
-  header.nav .brand .logo {
-    width: 48px;
-    height: 48px;
-    font-size: 15px;
-  }
-  header.nav .brand b {
-    font-size: 17px;
-    letter-spacing: .055em;
-    line-height: 1.2;
-  }
-  header.nav .brand small {
-    display: block;
-    margin-top: 5px;
-    font-size: 10px;
-    letter-spacing: .22em;
-  }
-  header.nav .links {
-    gap: clamp(17px, 2vw, 30px);
-    align-items: center;
-  }
-  header.nav .links > a:not(.btn) {
-    font-size: 14px;
-    font-weight: 700;
-    padding: 12px 0;
-    white-space: nowrap;
-  }
-  header.nav .links > a:not(.btn)::after {
-    bottom: 4px;
-  }
-  header.nav .links .btn {
-    font-size: 13px;
-    font-weight: 800;
-    padding: 15px 23px;
-    white-space: nowrap;
-  }
-  header.nav .menu {
-    font-size: 25px;
-    padding: 8px;
-  }
-  .mobile-menu {
-    top: calc(100% + 1px);
-    border-radius: 0 0 16px 16px;
-  }
-  @media (max-width: 1100px) {
-    header.nav .navin { min-height: 76px; gap: 14px; }
-    header.nav .links { gap: 14px; }
-    header.nav .links > a:not(.btn) { font-size: 13px; }
-    header.nav .brand b { font-size: 15px; }
-  }
-  @media (max-width: 820px) {
-    header.nav .navin { min-height: 72px; padding-top: 8px; padding-bottom: 8px; }
-    header.nav .brand .logo { width: 43px; height: 43px; }
-    header.nav .brand b { font-size: 15px; }
-    header.nav .brand small { font-size: 9px; letter-spacing: .15em; }
-  }
-</style>
-
-<style id="rg-booking-redesign">
-#booking.cream{padding:clamp(44px,6vw,76px) 0;background:linear-gradient(180deg,#edf2f8 0%,#f7f9fc 100%)}
-#booking .banner{min-height:190px;border-radius:24px;overflow:hidden;background-position:center 48%;background-size:cover;position:relative;box-shadow:0 18px 48px rgba(11,26,45,.14)}
-#booking .banner:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,18,34,.84),rgba(5,18,34,.25))}
-#booking .banner-content{position:relative;z-index:1;max-width:920px;padding:clamp(24px,4vw,46px)}
-#booking .banner-content h3{margin:10px 0 8px;color:#fff;font:700 clamp(27px,3.4vw,44px)/1.12 "Playfair Display",Georgia,serif;letter-spacing:-.025em}
-#booking .banner-content p{margin:0;color:rgba(255,255,255,.88);font-size:14px;line-height:1.65}
-#booking .rg-booking-panel{max-width:1000px;margin:22px auto 0;padding:clamp(22px,3.4vw,42px);border:1px solid rgba(196,155,75,.3);border-radius:24px;background:linear-gradient(145deg,#fff 0%,#fbfcfe 100%);box-shadow:0 22px 58px rgba(11,26,45,.09);position:relative;overflow:visible}
-#booking .rg-booking-title{text-align:center;margin:0 auto 24px}
-#booking .rg-booking-title .kicker{display:inline-flex;align-items:center;gap:10px;color:#b78600;font-size:10px;font-weight:900;letter-spacing:.2em}
-#booking .rg-booking-title .kicker:before,#booking .rg-booking-title .kicker:after{content:"";width:30px;height:2px;border-radius:4px;background:#ffc400}
-#booking .rg-booking-title h3{margin:9px 0 6px;color:#0b1a2d;font:700 clamp(27px,3vw,38px)/1.15 "Playfair Display",Georgia,serif}
-#booking .rg-booking-title p{margin:0;color:#68778a;font-size:13px}
-#booking .rg-booking-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 16px}
-#booking .rg-booking-form .field{display:flex;flex-direction:column;gap:7px;min-width:0;position:relative}
-#booking .rg-booking-form label{font-size:12px;font-weight:800;color:#526074}
-#booking .rg-booking-form input{width:100%;min-width:0;min-height:52px;padding:13px 15px;border:1px solid #dce3ec;border-radius:13px;background:#fff;color:#142235;font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s}
-#booking .rg-booking-form input:focus{border-color:#e0ad00;box-shadow:0 0 0 4px rgba(255,196,0,.13)}
-#booking .rg-destination-wrap{position:relative}
-#booking .rg-destination-suggestions{position:absolute;z-index:30;top:calc(100% + 7px);left:0;right:0;display:none;max-height:250px;overflow:auto;padding:6px;border:1px solid #e1e6ee;border-radius:14px;background:#fff;box-shadow:0 14px 34px rgba(11,26,45,.16)}
-#booking .rg-destination-suggestions.open{display:block}
-#booking .rg-destination-suggestions button{display:flex;width:100%;align-items:center;gap:10px;padding:11px 12px;border:0;border-radius:9px;background:transparent;color:#18283c;text-align:left;font-size:13px;cursor:pointer}
-#booking .rg-destination-suggestions button:hover,#booking .rg-destination-suggestions button:focus{background:#fff4c9;outline:none}
-#booking .rg-destination-suggestions button span{color:#c28d00}
-#booking .rg-booking-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-#booking .rg-submit-btn,#booking .rg-call-btn{min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:11px;padding:13px 22px;border:0;border-radius:999px;font-size:13px;font-weight:900;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
-#booking .rg-submit-btn{flex:1 1 300px;background:#ffc400;color:#101e2d;box-shadow:0 9px 20px rgba(192,145,0,.22)}
-#booking .rg-call-btn{flex:0 1 190px;background:#101e2d;color:#fff;box-shadow:0 0 0 0 rgba(255,196,0,.5);animation:rgCallPulse 2.2s infinite}
-#booking .rg-submit-btn:hover,#booking .rg-call-btn:hover{transform:translateY(-2px)}
-#booking .rg-submit-btn:focus-visible,#booking .rg-call-btn:focus-visible{outline:3px solid rgba(255,196,0,.45);outline-offset:3px}
-@keyframes rgCallPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,196,0,.42)}55%{box-shadow:0 0 0 9px rgba(255,196,0,0)}}
-@media(max-width:600px){
- #booking.cream{padding:32px 0 42px}
- #booking .container{width:calc(100% - 24px)}
- #booking .banner{min-height:150px;border-radius:18px}
- #booking .banner-content{padding:22px 18px}
- #booking .banner-content h3{font-size:27px}
- #booking .banner-content p{font-size:12px}
- #booking .rg-booking-panel{margin-top:15px;padding:21px 16px 18px;border-radius:19px}
- #booking .rg-booking-title{margin-bottom:19px}
- #booking .rg-booking-title h3{font-size:28px}
- #booking .rg-booking-title p{font-size:11px}
- #booking .rg-booking-form{grid-template-columns:minmax(0,1fr);gap:12px}
- #booking .rg-booking-form input{min-height:49px;font-size:13px}
- #booking .rg-booking-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:18px}
- #booking .rg-submit-btn,#booking .rg-call-btn{width:100%;min-height:49px;font-size:12px}
- #booking .rg-call-btn{justify-self:center}
-}
-@media(prefers-reduced-motion:reduce){#booking .rg-call-btn{animation:none}#booking .rg-submit-btn,#booking .rg-call-btn{transition:none}}
+<style id="rg-premium-footer-style">
+.rg-premium-footer{position:relative;overflow:hidden;background:#0b1727!important;color:#eaf0f7!important;padding:62px 0 0!important;border-top:1px solid rgba(255,255,255,.08)}
+.rg-premium-footer:before{content:"";position:absolute;left:-140px;top:-210px;width:420px;height:420px;border:1px solid rgba(231,190,93,.12);border-radius:50%;box-shadow:0 0 0 42px rgba(231,190,93,.025),0 0 0 86px rgba(231,190,93,.02);pointer-events:none}
+.rg-footer-top{position:relative;display:grid;grid-template-columns:1.45fr 1fr 1.2fr 1.15fr;gap:clamp(24px,4vw,56px);padding-bottom:46px}
+.rg-footer-brand img{display:block;width:min(245px,100%);height:auto;object-fit:contain;object-position:left center;margin-bottom:20px}
+.rg-footer-brand p{max-width:330px;margin:0 0 22px;color:#aebccc;font-size:13px;line-height:1.8}
+.rg-footer-cta{display:inline-flex;align-items:center;gap:18px;padding:12px 18px;border-radius:999px;background:#ffc400;color:#101e2d!important;font-size:12px;font-weight:900;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.rg-footer-cta:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(255,196,0,.2)}
+.rg-footer-column{display:flex;flex-direction:column;align-items:flex-start;gap:13px;padding-top:8px}
+.rg-footer-column h4{margin:0 0 8px;color:#f5d27b;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.rg-footer-column a,.rg-footer-column span{color:#c1ccda!important;font-size:12px;line-height:1.55;text-decoration:none;transition:color .2s}
+.rg-footer-column a:hover{color:#ffc400!important}
+.rg-footer-contact>a:first-of-type{color:#fff!important;font-size:17px;font-weight:800}
+.rg-footer-note{max-width:210px;color:#8797aa!important;font-size:11px!important}
+.rg-footer-bottom{position:relative;display:flex;justify-content:space-between;gap:18px;padding:19px 0 22px;border-top:1px solid rgba(255,255,255,.12);color:#8999ac;font-size:10px;letter-spacing:.025em}
+@media(max-width:900px){.rg-footer-top{grid-template-columns:1.3fr 1fr;gap:30px}.rg-footer-brand{grid-row:span 2}}
+@media(max-width:600px){.rg-premium-footer{padding:40px 0 0!important}.rg-footer-top{grid-template-columns:1fr 1fr;gap:28px 18px;padding-bottom:30px}.rg-footer-brand{grid-column:1/-1;grid-row:auto}.rg-footer-brand img{width:210px;margin-bottom:14px}.rg-footer-brand p{font-size:12px;margin-bottom:16px}.rg-footer-column{gap:11px;padding-top:0}.rg-footer-column h4{font-size:9px;margin-bottom:5px}.rg-footer-column a,.rg-footer-column span{font-size:11px}.rg-footer-contact>a:first-of-type{font-size:14px}.rg-footer-note{font-size:10px!important}.rg-footer-bottom{flex-direction:column;gap:7px;padding:16px 0 19px;font-size:9px}}
 </style>
 </head>
 <body>
@@ -436,43 +222,10 @@
     </article>
   </div>
 </div></section>
-<section id="tariff" class="cream reveal"><div class="container"><div class="tariff rg-rate-card"><div class="tariff-copy rg-rate-intro"><div class="kicker">STARTING RATE CARD</div><h2>Clear rates.<br><em>Flexible quotes.</em></h2><p>Indicative per-kilometre starting rates. Final pricing depends on route, date, minimum kilometres, tolls, permits and vehicle availability.</p><div class="rg-rate-note"><span class="rg-rate-note-dot"></span>Transparent pricing · Chennai pickup</div></div><div class="rg-rate-pricing"><div class="rg-rate-toolbar"><div><span class="rg-rate-eyebrow">CHOOSE YOUR CURRENCY</span><span class="rg-rate-hint">Rates shown per kilometre</span></div><div class="currency rg-currency-switch" role="group" aria-label="Choose currency"><button id="inrBtn" class="active" type="button" onclick="setCurrency('INR')" aria-pressed="true">₹ <span>INR</span></button><button id="usdBtn" type="button" onclick="setCurrency('USD')" aria-pressed="false">$ <span>USD</span></button></div></div><div class="table-wrap rg-rate-table-wrap"><table class="rg-rate-table"><thead><tr><th>Vehicle</th><th>Non-AC</th><th>AC</th></tr></thead><tbody id="rateBody"></tbody></table></div></div></div></div></section>
-<section id="booking" class="cream reveal"><div class="container"><div class="banner" style="background-image:url('assets/images/site/tamilnadu-tour.jpg')"><div class="banner-content"><div class="kicker" style="color:#e3c47f">BOOK YOUR VEHICLE</div><h3>Tell us the date, group and destination.</h3><p>Your booking request is converted into a ready-to-send WhatsApp message.</p></div></div><div class="booking-grid rg-booking-layout">
-  <div class="panel rg-booking-panel">
-    <div class="kicker">BOOK A TEMPO</div>
-    <h3>Plan your journey.</h3>
-    <p class="rg-panel-intro">Share a few details and we’ll prepare your booking request on WhatsApp.</p>
-    <form class="form rg-booking-form" onsubmit="return sendWhatsApp(this)">
-      <div class="field"><label>Name</label><input name="name" placeholder="Your name" autocomplete="name" required></div>
-      <div class="field"><label>WhatsApp / Phone</label><input name="phone" type="tel" placeholder="+91..." autocomplete="tel" required></div>
-      <div class="field"><label>Travel date</label><input name="date" type="date" required></div>
-      <div class="field"><label>Travellers</label><input name="travellers" type="number" min="1" placeholder="Number of travellers" required></div>
-      <div class="field"><label>Vehicle</label><select id="bookingVehicle" name="vehicle"><option>5 Seater Ciaz Sedan</option><option>7 Seater Innova</option><option>12 Seater Urbania</option><option>14 Seater</option><option>17 Seater Urbania</option><option>18 Seater</option><option>21 Seater</option><option>25 Seater</option></select></div>
-      <div class="field"><label>Trip type</label><select name="tripType"><option>Friends / Family Tour</option><option>Corporate Travel</option><option>Wedding / Event</option><option>Pilgrimage</option><option>Airport / Transfer</option></select></div>
-      <div class="field span2"><label>Destination</label><input id="destinationInput" name="destination" placeholder="Where would you like to go?" required></div>
-      <div class="field span2"><label>Pickup location</label><input name="pickup" value="Chennai" placeholder="Pickup location"></div>
-      <div class="field span2"><label>Special requests <span class="rg-optional">(optional)</span></label><textarea name="message" placeholder="AC, luggage, number of days or other requirements..."></textarea></div>
-      <div class="span2"><button class="btn dark rg-submit-btn" type="submit">Send booking request <span aria-hidden="true">→</span></button></div>
-    </form>
-  </div>
-  <aside class="panel dark rg-why-panel">
-    <div class="kicker">THE RG DIFFERENCE</div>
-    <h3>Group travel, made simple.</h3>
-    <p class="rg-panel-intro">The essentials you need to plan a comfortable journey from Chennai.</p>
-    <div class="rg-benefits">
-      <article class="rg-benefit"><span class="rg-benefit-icon" aria-hidden="true">01</span><div><h4>Choose your vehicle</h4><p>Options for small groups, large families and events.</p></div></article>
-      <article class="rg-benefit"><span class="rg-benefit-icon" aria-hidden="true">02</span><div><h4>Travel for your occasion</h4><p>Family tours, corporate outings, weddings and pilgrimages.</p></div></article>
-      <article class="rg-benefit"><span class="rg-benefit-icon" aria-hidden="true">03</span><div><h4>Request a quote easily</h4><p>Send your travel date, pickup and destination in one WhatsApp request.</p></div></article>
-    </div>
-    <div class="rg-contact-card">
-      <span class="rg-contact-label">NEED HELP PLANNING?</span>
-      <strong>+91 90030 85856</strong>
-      <span class="rg-contact-caption">Call or WhatsApp for availability and a tailored quote.</span>
-      <a class="rg-contact-link" href="https://wa.me/919003085856" target="_blank" rel="noopener">Chat on WhatsApp <span aria-hidden="true">↗</span></a>
-    </div>
-  </aside>
-</div>
+<section id="tariff" class="cream reveal"><div class="container"><div class="tariff rg-rate-card"><div class="tariff-copy rg-rate-intro"><div class="kicker">STARTING RATE CARD</div><h2>Clear rates.<br><em>Flexible quotes.</em></h2><p>Indicative per-kilometre starting rates. Final pricing depends on route, date, minimum kilometres, tolls, permits and vehicle availability.</p><div class="rg-rate-note"><span class="rg-rate-note-dot"></span>Transparent pricing · Chennai pickup</div></div><div class="rg-rate-pricing"><div class="rg-rate-to
 </main>
+
+
 
 <div class="help-launcher" id="helpLauncher" onclick="toggleChat()" aria-label="Customer help"><span>?</span>Need Help?</div>
 <div class="chatbot" id="chatbot" aria-label="RG customer help chatbot">
@@ -487,7 +240,44 @@
   </div>
   <div class="chat-foot"><input id="chatInput" placeholder="Ask about your trip…" onkeydown="if(event.key==='Enter')sendChat()"><button onclick="sendChat()">Send</button></div>
 </div>
-<footer class="footer"><div class="container"><div class="footer-grid"><div><a class="brand" href="#home"><span class="logo">RG</span><span><b>Travels in chennai</b><small>CHENNAI • TRAVEL TOGETHER</small></span></a><p>Premium private group travel from Chennai for family trips, corporate travel, tours, events and outstation journeys.</p></div><div><h4>Explore</h4><a href="#fleet">Fleet</a><a href="#trips">Trips</a><a href="#cities">Destinations</a><a href="#tariff">Tariff</a></div><div><h4>Contact</h4><a href="tel:+919003085856">+91 90030 85856</a><a href="https://wa.me/919003085856" target="_blank">WhatsApp</a><p>Chennai, Tamil Nadu</p></div></div><div class="footline"><span>© 2026 Travels in chennai </span><span>Premium Group Travel • Chennai</span></div></div></footer>
+<footer class="footer rg-premium-footer">
+  <div class="container">
+    <div class="rg-footer-top">
+      <div class="rg-footer-brand">
+        <a href="#home" aria-label="Team RG Travel Hub home"><img src="assets/images/team-rg-logo.svg" alt="TEAM RG Travel Hub"></a>
+        <p>Premium group travel from Chennai. Comfortable vehicles, thoughtful service and journeys planned around you.</p>
+        <a class="rg-footer-cta" href="#booking">Plan your journey <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="rg-footer-column">
+        <h4>Explore</h4>
+        <a href="#fleet">Our Fleet</a>
+        <a href="#tempo-gallery">Vehicle Gallery</a>
+        <a href="#trips">Tour Packages</a>
+        <a href="#cities">Destinations</a>
+        <a href="#tariff">Tariff &amp; Rates</a>
+      </div>
+      <div class="rg-footer-column">
+        <h4>Travel Services</h4>
+        <a href="#occasions">Family &amp; Friends Trips</a>
+        <a href="#occasions">Corporate Travel</a>
+        <a href="#occasions">Weddings &amp; Events</a>
+        <a href="#occasions">Pilgrimage Tours</a>
+        <a href="#booking">Custom Travel Enquiry</a>
+      </div>
+      <div class="rg-footer-column rg-footer-contact">
+        <h4>Get in touch</h4>
+        <a href="tel:+919003085856">+91 90030 85856</a>
+        <a href="https://wa.me/919003085856" target="_blank" rel="noopener">WhatsApp Enquiry ↗</a>
+        <span>Chennai, Tamil Nadu, India</span>
+        <span class="rg-footer-note">Call us for vehicle availability and a personalised quote.</span>
+      </div>
+    </div>
+    <div class="rg-footer-bottom">
+      <span>© 2026 Team RG Travel Hub. All rights reserved.</span>
+      <span>Made for journeys worth remembering.</span>
+    </div>
+  </div>
+</footer>
 <div class="float"><a href="https://wa.me/919003085856" target="_blank" aria-label="WhatsApp"><svg class="icon" viewBox="0 0 24 24"><path d="M20.52 3.48A11.83 11.83 0 0 0 12.08 0C5.55 0 .24 5.3.24 11.83c0 2.08.54 4.1 1.57 5.88L.14 24l6.44-1.69a11.8 11.8 0 0 0 5.5 1.36h.01c6.53 0 11.84-5.31 11.84-11.84 0-3.16-1.23-6.13-3.41-8.35ZM12.09 21.65h-.01a9.8 9.8 0 0 1-5-1.36l-.36-.21-3.82 1 1.02-3.72-.23-.38a9.8 9.8 0 1 1 8.4 4.67Zm5.37-7.35c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.19.29-.76.95-.93 1.15-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.29-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.61.71.23 1.35.2 1.86.12.57-.09 1.72-.7 1.96-1.38.24-.68.24-1.27.17-1.39-.07-.12-.27-.2-.56-.34Z"/></svg></a></div>
 <div class="modal" id="vehicleModal" onclick="closeVehicle(event)"><div class="modal-card" onclick="event.stopPropagation()"><button class="modal-close" onclick="closeVehicle()">×</button><div class="detail-grid"><div class="detail-photo"><img id="detailImg" src="assets/images/site/tempo.jpg" alt="Tempo Traveller"><div class="seat-badge" id="detailBadge">12 SEATER</div></div><div class="detail-copy"><div class="kicker">VEHICLE DETAILS</div><h2 id="detailTitle">12 Seater Tempo Traveller</h2><p class="lead" id="detailLead">A premium group travel option designed for comfortable tours, friends trips, family journeys and corporate travel.</p><div class="detail-chips" id="detailChips"></div><div class="detail-list" id="detailList"></div><div class="audience"><span>Friends & Family</span><span>Corporate</span><span>Tours</span><span>Events</span></div><div class="detail-note">* DJ lighting and entertainment fit-outs can vary by vehicle. Confirm the exact vehicle configuration and availability when booking.</div><div class="detail-actions"><button class="btn dark" id="detailBook" onclick="bookVehicleFromModal()">Book This Vehicle</button><button class="btn outline" onclick="closeVehicle()">Close</button></div></div></div></div></div>
 <div class="toast" id="toast">Vehicle selected</div>
