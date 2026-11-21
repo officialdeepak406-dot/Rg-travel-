@@ -112,3 +112,57 @@ section{scroll-margin-top:90px}.cream{background:#eef1f5}.kicker{color:#c28e00}.
  .hero h1{font-size:30px!important}
  #fleet .snap{grid-auto-columns:88%}
 }
+
+/* TEAM RG Tempo Gallery — desktop and mobile redesign */
+#tempo-gallery.rg-tempo-gallery{padding:clamp(48px,6vw,82px) 0;background:#f2f4f7;overflow:hidden}
+#tempo-gallery .container{max-width:1450px}
+#tempo-gallery .rg-gallery-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}
+#tempo-gallery .rg-gallery-kicker{display:flex;align-items:center;gap:10px;color:#b78920;font-size:10px;font-weight:900;letter-spacing:.22em;margin-bottom:13px}
+#tempo-gallery .rg-gallery-kicker span{display:inline-block;width:27px;height:4px;border-radius:9px;background:#ffc400}
+#tempo-gallery .rg-gallery-heading h2{font:800 clamp(34px,4.5vw,58px)/1.08 Manrope,Arial,sans-serif;letter-spacing:-1.8px;color:#0b1a2d;margin:0}
+#tempo-gallery .rg-gallery-heading h2 em{color:#e2a900;font-style:italic}
+#tempo-gallery .rg-gallery-heading p{font-size:clamp(12px,1.2vw,16px);color:#596678;margin:9px 0 0;line-height:1.6}
+#tempo-gallery .rg-gallery-count{display:flex;align-items:center;gap:9px;flex:0 0 auto;padding:8px 0 8px 20px;border-left:1px solid #d4d9e0}
+#tempo-gallery .rg-gallery-count strong{font:800 37px/1 Manrope,Arial,sans-serif;color:#0b1a2d}
+#tempo-gallery .rg-gallery-count span{font-size:8px;line-height:1.45;font-weight:900;letter-spacing:.13em;color:#b78920}
+#tempo-gallery .rg-gallery-snap{grid-auto-columns:calc((100% - 36px)/3);gap:18px;padding:4px 2px 18px;scroll-padding-inline:2px}
+#tempo-gallery .rg-gallery-card{height:clamp(300px,27vw,410px);border:0;border-radius:23px;box-shadow:0 15px 36px rgba(8,24,43,.13);background:#0b1a2d}
+#tempo-gallery .rg-gallery-card img{object-fit:cover}
+#tempo-gallery .rg-gallery-card:after{background:linear-gradient(180deg,rgba(4,15,28,0) 35%,rgba(4,15,28,.88) 100%)}
+#tempo-gallery .rg-gallery-card:hover img{transform:scale(1.045)}
+#tempo-gallery .gallery-copy{left:22px;right:20px;bottom:20px}
+#tempo-gallery .gallery-copy small{display:inline-block;color:#ffc928;font-size:9px;letter-spacing:.15em;font-weight:900;border-left:3px solid #ffc400;padding-left:9px}
+#tempo-gallery .gallery-copy h3{font:800 clamp(19px,1.8vw,26px)/1.12 Manrope,Arial,sans-serif;letter-spacing:-.5px;margin:7px 0 4px;color:#fff}
+#tempo-gallery .gallery-copy p{font-size:11px;line-height:1.5;color:rgba(255,255,255,.88)}
+#tempo-gallery .rg-gallery-footer{display:flex;align-items:center;justify-content:space-between;margin-top:4px}
+#tempo-gallery .rg-gallery-hint{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;color:#647184}
+#tempo-gallery .rg-gallery-dot{width:22px;height:7px;border-radius:8px;background:#ffc400;display:inline-block}
+#tempo-gallery .rg-gallery-footer .arrows{display:flex;gap:10px}
+#tempo-gallery .rg-gallery-footer .arrow{width:43px;height:43px;border-radius:50%;background:#0b1a2d;color:#ffc400;border:1px solid #0b1a2d;font-size:21px;box-shadow:0 6px 16px rgba(8,24,43,.13)}
+#tempo-gallery .rg-gallery-footer .arrow:hover{background:#ffc400;color:#0b1a2d;border-color:#ffc400}
+@media(max-width:900px){
+ #tempo-gallery .rg-gallery-snap{grid-auto-columns:calc((100% - 18px)/2);gap:18px}
+ #tempo-gallery .rg-gallery-card{height:330px}
+}
+@media(max-width:600px){
+ #tempo-gallery.rg-tempo-gallery{padding:38px 0 44px}
+ #tempo-gallery .rg-gallery-heading{margin-bottom:18px;gap:12px}
+ #tempo-gallery .rg-gallery-kicker{font-size:8px;letter-spacing:.17em;margin-bottom:9px}
+ #tempo-gallery .rg-gallery-kicker span{width:19px;height:3px}
+ #tempo-gallery .rg-gallery-heading h2{font-size:clamp(25px,7vw,32px);line-height:1.12;letter-spacing:-.8px}
+ #tempo-gallery .rg-gallery-heading p{font-size:10px;line-height:1.5;margin-top:6px;max-width:270px}
+ #tempo-gallery .rg-gallery-count{padding-left:10px;gap:5px}
+ #tempo-gallery .rg-gallery-count strong{font-size:25px}
+ #tempo-gallery .rg-gallery-count span{font-size:6px}
+ #tempo-gallery .rg-gallery-snap{grid-auto-columns:86%;gap:12px;padding:3px 2px 14px}
+ #tempo-gallery .rg-gallery-card{height:clamp(260px,78vw,340px);border-radius:18px}
+ #tempo-gallery .gallery-copy{left:15px;right:14px;bottom:15px}
+ #tempo-gallery .gallery-copy small{font-size:8px;letter-spacing:.12em;padding-left:7px}
+ #tempo-gallery .gallery-copy h3{font-size:19px;margin:5px 0 3px}
+ #tempo-gallery .gallery-copy p{font-size:10px}
+ #tempo-gallery .rg-gallery-footer{margin-top:2px}
+ #tempo-gallery .rg-gallery-hint{font-size:9px;gap:7px}
+ #tempo-gallery .rg-gallery-dot{width:17px;height:6px}
+ #tempo-gallery .rg-gallery-footer .arrows{gap:7px}
+ #tempo-gallery .rg-gallery-footer .arrow{width:35px;height:35px;font-size:17px}
+}
