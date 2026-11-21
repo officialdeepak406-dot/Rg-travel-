@@ -342,3 +342,57 @@ section{scroll-margin-top:90px}.cream{background:#eef1f5}.kicker{color:#c28e00}.
  #tariff .rg-rate-table td:nth-child(3):before{content:"AC"}
 }
 @media(prefers-reduced-motion:reduce){#tariff .rg-currency-switch button{transition:none}}
+
+
+/* TEAM RG — compact gallery and signature-trip cards to match the fleet grid */
+/* Keep the existing snap scrolling, arrow controls, links and auto-slide script.
+   Only reduce card footprint and show more cards per viewport, like #fleet. */
+#tempo-gallery .rg-gallery-snap,
+#trips .snap{
+  grid-auto-columns:calc((100% - 54px)/4);
+  gap:18px;
+}
+#tempo-gallery .rg-gallery-card{
+  height:clamp(275px,23vw,330px);
+  border-radius:20px;
+}
+#tempo-gallery .gallery-copy{left:17px;right:16px;bottom:16px}
+#tempo-gallery .gallery-copy h3{font-size:clamp(17px,1.45vw,21px)}
+#tempo-gallery .gallery-copy p{font-size:10px;line-height:1.45}
+#trips .dest-card{
+  height:clamp(285px,24vw,345px);
+  border-radius:20px;
+}
+#trips .dest-copy{left:17px;right:16px;bottom:16px}
+#trips .dest-copy h3{font-size:clamp(18px,1.55vw,22px)}
+#trips .dest-copy p{font-size:9px;line-height:1.45}
+@media(max-width:1050px){
+  #tempo-gallery .rg-gallery-snap,
+  #trips .snap{grid-auto-columns:calc((100% - 36px)/3);gap:18px}
+  #tempo-gallery .rg-gallery-card{height:300px}
+  #trips .dest-card{height:315px}
+}
+@media(max-width:820px){
+  #tempo-gallery .rg-gallery-snap,
+  #trips .snap{grid-auto-columns:78%;gap:13px}
+  #tempo-gallery .rg-gallery-card{height:clamp(260px,48vw,315px);border-radius:18px}
+  #trips .dest-card{height:clamp(270px,51vw,325px);border-radius:18px}
+  #tempo-gallery .gallery-copy,
+  #trips .dest-copy{left:15px;right:14px;bottom:14px}
+}
+@media(max-width:600px){
+  #tempo-gallery .rg-gallery-snap,
+  #trips .snap{grid-auto-columns:78%;gap:12px}
+  #tempo-gallery .rg-gallery-card{height:clamp(245px,72vw,295px)}
+  #trips .dest-card{height:clamp(255px,76vw,305px)}
+  #tempo-gallery .gallery-copy h3{font-size:18px}
+  #tempo-gallery .gallery-copy p{font-size:9px}
+  #trips .dest-copy h3{font-size:19px}
+  #trips .dest-copy p{font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){
+  #tempo-gallery .rg-gallery-card,
+  #trips .dest-card,
+  #tempo-gallery .rg-gallery-card img,
+  #trips .dest-card img{transition:none}
+}
