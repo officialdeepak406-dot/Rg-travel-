@@ -222,7 +222,62 @@
     </article>
   </div>
 </div></section>
-<section id="tariff" class="cream reveal"><div class="container"><div class="tariff rg-rate-card"><div class="tariff-copy rg-rate-intro"><div class="kicker">STARTING RATE CARD</div><h2>Clear rates.<br><em>Flexible quotes.</em></h2><p>Indicative per-kilometre starting rates. Final pricing depends on route, date, minimum kilometres, tolls, permits and vehicle availability.</p><div class="rg-rate-note"><span class="rg-rate-note-dot"></span>Transparent pricing · Chennai pickup</div></div><div class="rg-rate-pricing"><div class="rg-rate-to
+<section id="tariff" class="cream reveal">
+  <div class="container">
+    <div class="tariff rg-rate-card">
+      <div class="tariff-copy rg-rate-intro">
+        <div class="kicker">STARTING RATE CARD</div>
+        <h2>Clear rates.<br><em>Flexible quotes.</em></h2>
+        <p>Indicative per-kilometre starting rates. Final pricing depends on route, date, minimum kilometres, tolls, permits and vehicle availability.</p>
+        <div class="rg-rate-note"><span class="rg-rate-note-dot"></span>Transparent pricing · Chennai pickup</div>
+      </div>
+      <div class="rg-rate-pricing">
+        <div class="rg-rate-toolbar">
+          <div><span class="rg-rate-eyebrow">VEHICLE STARTING RATES</span><span class="rg-rate-hint">Choose your preferred display currency</span></div>
+          <div class="rg-currency-switch" role="group" aria-label="Rate currency">
+            <button id="inrBtn" class="active" type="button" onclick="setCurrency('INR')" aria-pressed="true">₹ INR</button>
+            <button id="usdBtn" type="button" onclick="setCurrency('USD')" aria-pressed="false">$ USD</button>
+          </div>
+        </div>
+        <div class="rg-rate-table-wrap">
+          <table class="rg-rate-table">
+            <thead><tr><th>Vehicle</th><th>Non-AC</th><th>AC</th></tr></thead>
+            <tbody id="rateBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="booking" class="cream reveal">
+  <div class="container">
+    <div class="banner" style="background-image:url('assets/images/site/tamilnadu-tour.jpg')">
+      <div class="banner-content">
+        <div class="kicker" style="color:#e3c47f">BOOK YOUR VEHICLE</div>
+        <h3>Tell us your date and destination.</h3>
+        <p>Share four quick details. We’ll prepare your booking request on WhatsApp.</p>
+      </div>
+    </div>
+    <div class="panel rg-booking-panel">
+      <div class="rg-booking-title">
+        <div class="kicker">TEAM RG TRAVEL HUB</div>
+        <h3>Book a Tempo</h3>
+        <p>Plan your journey in a few quick steps.</p>
+      </div>
+      <form class="form rg-booking-form" onsubmit="return sendWhatsApp(this)">
+        <div class="field"><label for="bookingName">Your name</label><input id="bookingName" name="name" placeholder="Enter your name" autocomplete="name" required></div>
+        <div class="field"><label for="bookingPhone">WhatsApp / Phone</label><input id="bookingPhone" name="phone" type="tel" placeholder="+91 mobile number" autocomplete="tel" inputmode="tel" required></div>
+        <div class="field"><label for="bookingDate">Travel date</label><input id="bookingDate" name="date" type="date" required></div>
+        <div class="field rg-destination-wrap"><label for="destinationInput">Destination</label><input id="destinationInput" name="destination" placeholder="Start typing a destination..." autocomplete="off" aria-autocomplete="list" aria-controls="destinationSuggestions" aria-expanded="false" required><div class="rg-destination-suggestions" id="destinationSuggestions" role="listbox" aria-label="Destination suggestions"></div></div>
+        <input type="hidden" id="bookingVehicle" name="vehicle" value="">
+        <div class="rg-booking-actions" style="grid-column:1/-1">
+          <button class="btn rg-submit-btn" type="submit"><span aria-hidden="true">◉</span> Send Booking Request on WhatsApp <span aria-hidden="true">→</span></button>
+          <a class="rg-call-btn" href="tel:+919003085856"><span aria-hidden="true">☎</span> Call Now</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
 </main>
 
 
