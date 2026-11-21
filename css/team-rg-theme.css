@@ -267,3 +267,14 @@ section{scroll-margin-top:90px}.cream{background:#eef1f5}.kicker{color:#c28e00}.
  .occasion-card ul{font-size:10px;line-height:2;margin-top:11px}
 }
 @media(prefers-reduced-motion:reduce){.occasion-card{transition:none}.occasion-card:hover{transform:none}}
+
+
+/* Occasion card cover photography */
+#occasions .occasion-art{isolation:isolate}
+#occasions .occasion-art .occasion-cover{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center;z-index:0;transition:transform .65s cubic-bezier(.2,.75,.2,1)}
+#occasions .occasion-art:before{z-index:1;background:linear-gradient(180deg,rgba(5,18,34,.04) 5%,rgba(5,18,34,.68) 100%)}
+#occasions .occasion-art:after{z-index:1;background:linear-gradient(110deg,rgba(5,18,34,.12),transparent 65%)}
+#occasions .occasion-art-icon{z-index:2;color:rgba(255,255,255,.32);text-shadow:0 2px 12px rgba(0,0,0,.25)}
+#occasions .occasion-art-label{z-index:2;text-shadow:0 2px 8px rgba(0,0,0,.45)}
+#occasions .occasion-card:hover .occasion-cover{transform:scale(1.045)}
+@media(max-width:700px){#occasions .occasion-art{height:145px}#occasions .occasion-art .occasion-cover{object-position:center 45%}}
