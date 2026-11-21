@@ -166,3 +166,48 @@ section{scroll-margin-top:90px}.cream{background:#eef1f5}.kicker{color:#c28e00}.
  #tempo-gallery .rg-gallery-footer .arrows{gap:7px}
  #tempo-gallery .rg-gallery-footer .arrow{width:35px;height:35px;font-size:17px}
 }
+
+/* TEAM RG Signature Trips — match the Tempo Gallery visual theme; keep existing snap/auto-slide behavior */
+#trips{padding:clamp(48px,6vw,82px) 0;background:#f2f4f7;overflow:hidden}
+#trips .section-head{align-items:end;margin-bottom:22px}
+#trips .section-head .kicker{color:#b78920;font-size:9px;letter-spacing:.22em;margin-bottom:12px}
+#trips .section-head h2{font:800 clamp(34px,4.5vw,58px)/1.08 Manrope,Arial,sans-serif;letter-spacing:-1.8px;color:#0b1a2d}
+#trips .trip-region-note{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 20px}
+#trips .trip-region{border:1px solid #dce1e7;padding:8px 13px;border-radius:999px;font:800 9px/1 Manrope,Arial,sans-serif;letter-spacing:.1em;color:#647184;background:#fff;transition:background .2s ease,color .2s ease,border-color .2s ease}
+#trips .trip-region.active{background:#0b1a2d;color:#ffc928;border-color:#0b1a2d}
+#trips .snap{grid-auto-columns:calc((100% - 36px)/3);gap:18px;padding:4px 2px 18px;scroll-padding-inline:2px}
+#trips .dest-card{height:clamp(330px,29vw,410px);border:0;border-radius:23px;background:#0b1a2d;box-shadow:0 15px 36px rgba(8,24,43,.13);transition:transform .35s ease,box-shadow .35s ease}
+#trips .dest-card:after{background:linear-gradient(180deg,rgba(4,15,28,.02) 24%,rgba(4,15,28,.9) 100%)}
+#trips .dest-card:hover{transform:translateY(-4px);box-shadow:0 20px 42px rgba(8,24,43,.18)}
+#trips .dest-card img{transition:transform .7s ease}
+#trips .dest-copy{left:21px;right:19px;bottom:20px;color:#fff}
+#trips .dest-copy .tag{background:#ffc928;color:#0b1a2d;padding:7px 10px;border-radius:999px;font:900 8px/1 Manrope,Arial,sans-serif;letter-spacing:.04em;margin-bottom:11px}
+#trips .dest-copy h3{font:800 clamp(20px,2vw,27px)/1.12 Manrope,Arial,sans-serif;letter-spacing:-.55px;color:#fff;margin:0 0 7px}
+#trips .dest-copy p{font:500 10px/1.55 Manrope,Arial,sans-serif;color:rgba(255,255,255,.88);margin:0;max-width:34ch}
+#trips .dest-copy .btn{display:none}
+#trips .slider-controls{margin-top:2px}
+#trips .scroll-hint{font-size:10px;color:#647184}
+#trips .slider-controls .arrow{width:42px;height:42px;border-radius:50%;background:#0b1a2d;color:#ffc928;border:1px solid #0b1a2d}
+#trips .slider-controls .arrow:hover{background:#ffc928;color:#0b1a2d;border-color:#ffc928}
+@media(max-width:900px){
+ #trips .snap{grid-auto-columns:calc((100% - 18px)/2);gap:18px}
+ #trips .dest-card{height:360px}
+}
+@media(max-width:700px){
+ #trips{padding:38px 0 44px}
+ #trips .section-head{margin-bottom:16px}
+ #trips .section-head .kicker{font-size:8px;letter-spacing:.17em;margin-bottom:9px}
+ #trips .section-head h2{font-size:clamp(26px,7vw,33px);line-height:1.12;letter-spacing:-.8px}
+ #trips .trip-region-note{margin:0 0 15px;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding-bottom:3px}
+ #trips .trip-region-note::-webkit-scrollbar{display:none}
+ #trips .trip-region{white-space:nowrap;padding:8px 11px;font-size:8px}
+ #trips .snap{grid-auto-columns:86%;gap:12px;padding:3px 2px 14px}
+ #trips .dest-card{height:clamp(285px,82vw,350px);border-radius:18px}
+ #trips .dest-copy{left:15px;right:14px;bottom:15px}
+ #trips .dest-copy .tag{font-size:7px;padding:6px 8px;margin-bottom:8px}
+ #trips .dest-copy h3{font-size:20px;line-height:1.12;margin-bottom:5px}
+ #trips .dest-copy p{font-size:9px;line-height:1.5}
+ #trips .slider-controls{margin-top:1px}
+ #trips .scroll-hint{font-size:9px}
+ #trips .slider-controls .arrow{width:35px;height:35px;font-size:17px}
+}
