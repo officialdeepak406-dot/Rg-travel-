@@ -278,3 +278,67 @@ section{scroll-margin-top:90px}.cream{background:#eef1f5}.kicker{color:#c28e00}.
 #occasions .occasion-art-label{z-index:2;text-shadow:0 2px 8px rgba(0,0,0,.45)}
 #occasions .occasion-card:hover .occasion-cover{transform:scale(1.045)}
 @media(max-width:700px){#occasions .occasion-art{height:145px}#occasions .occasion-art .occasion-cover{object-position:center 45%}}
+
+
+/* TEAM RG — redesigned responsive rate card */
+#tariff.cream{padding:clamp(48px,6vw,82px) 0;background:linear-gradient(180deg,#edf2f8 0%,#f7f9fc 100%)}
+#tariff .rg-rate-card{display:grid;grid-template-columns:minmax(250px,.78fr) minmax(0,1.22fr);gap:clamp(24px,4vw,54px);align-items:center;padding:clamp(25px,4vw,48px);border:1px solid rgba(11,26,45,.08);border-radius:30px;background:linear-gradient(145deg,#fff 0%,#fbfcfe 100%);box-shadow:0 22px 65px rgba(11,26,45,.09)}
+#tariff .rg-rate-intro .kicker{display:flex;align-items:center;gap:10px;color:#bd8a00;font-size:9px;letter-spacing:.2em}
+#tariff .rg-rate-intro .kicker:before{content:"";width:24px;height:3px;border-radius:4px;background:#ffc400}
+#tariff .rg-rate-intro h2{font:800 clamp(34px,4.1vw,57px)/1.02 Manrope,Arial,sans-serif;letter-spacing:-2px;color:#0b1a2d;margin:17px 0}
+#tariff .rg-rate-intro h2 em{color:#c28d00;font-style:italic}
+#tariff .rg-rate-intro>p{max-width:43ch;font-size:13px;line-height:1.8;color:#647286}
+#tariff .rg-rate-note{display:flex;align-items:center;gap:9px;margin-top:22px;color:#536276;font-size:11px;font-weight:700}
+#tariff .rg-rate-note-dot{width:8px;height:8px;border-radius:50%;background:#e8b400;box-shadow:0 0 0 5px rgba(232,180,0,.13)}
+#tariff .rg-rate-pricing{min-width:0}
+#tariff .rg-rate-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}
+#tariff .rg-rate-eyebrow,#tariff .rg-rate-hint{display:block}
+#tariff .rg-rate-eyebrow{font-size:10px;font-weight:900;letter-spacing:.14em;color:#0b1a2d}
+#tariff .rg-rate-hint{margin-top:5px;font-size:10px;color:#8290a1}
+#tariff .rg-currency-switch{display:flex;align-items:center;gap:4px;padding:5px;width:max-content;max-width:100%;border:1px solid #dce3ec;border-radius:999px;background:#f2f5f9;box-shadow:inset 0 1px 3px rgba(11,26,45,.05)}
+#tariff .rg-currency-switch button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-width:96px;padding:11px 17px;border:0;border-radius:999px;background:transparent;color:#68778a;font-size:13px;font-weight:900;cursor:pointer;transition:background .2s ease,color .2s ease,box-shadow .2s ease}
+#tariff .rg-currency-switch button.active{background:#ffc400;color:#111d2b;box-shadow:0 5px 14px rgba(177,132,0,.2)}
+#tariff .rg-rate-table-wrap{overflow:visible;border:1px solid #e4e9f0;border-radius:18px;background:#fff;box-shadow:0 10px 28px rgba(11,26,45,.055)}
+#tariff .rg-rate-table{width:100%;min-width:0;border-collapse:separate;border-spacing:0;overflow:hidden}
+#tariff .rg-rate-table thead{background:#0b1a2d}
+#tariff .rg-rate-table th{padding:16px 18px;color:#fff;text-align:left;font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:0}
+#tariff .rg-rate-table th:first-child{border-radius:16px 0 0 0}
+#tariff .rg-rate-table th:last-child{border-radius:0 16px 0 0}
+#tariff .rg-rate-table td{padding:14px 18px;border-bottom:1px solid #edf0f4;color:#17263a;font-size:12px}
+#tariff .rg-rate-table tbody tr:nth-child(even){background:#f4f7fb}
+#tariff .rg-rate-table tbody tr:last-child td{border-bottom:0}
+#tariff .rg-rate-table td strong{font-weight:800;color:#122239}
+#tariff .rg-rate-table td.price{font-size:13px;font-weight:900;color:#10223a;font-variant-numeric:tabular-nums}
+@media(max-width:900px){
+ #tariff .rg-rate-card{grid-template-columns:1fr;gap:25px}
+ #tariff .rg-rate-intro h2{font-size:clamp(36px,7vw,52px)}
+ #tariff .rg-rate-intro>p{max-width:65ch}
+}
+@media(max-width:600px){
+ #tariff.cream{padding:34px 0 42px}
+ #tariff .container{width:calc(100% - 24px)}
+ #tariff .rg-rate-card{gap:19px;padding:21px 15px 16px;border-radius:22px}
+ #tariff .rg-rate-intro .kicker{font-size:8px}
+ #tariff .rg-rate-intro h2{font-size:clamp(32px,9vw,42px);letter-spacing:-1.4px;margin:12px 0 10px}
+ #tariff .rg-rate-intro>p{font-size:11px;line-height:1.65;margin-bottom:0}
+ #tariff .rg-rate-note{font-size:9px;margin-top:14px}
+ #tariff .rg-rate-toolbar{align-items:flex-start;flex-direction:column;gap:12px;margin-bottom:13px}
+ #tariff .rg-rate-eyebrow{font-size:9px}
+ #tariff .rg-rate-hint{font-size:9px}
+ #tariff .rg-currency-switch{width:100%;display:grid;grid-template-columns:1fr 1fr;border-radius:14px;padding:4px}
+ #tariff .rg-currency-switch button{min-width:0;width:100%;padding:12px 8px;border-radius:10px;font-size:13px}
+ #tariff .rg-rate-table-wrap{border:0;background:transparent;box-shadow:none;overflow:visible}
+ #tariff .rg-rate-table,#tariff .rg-rate-table tbody{display:block;width:100%}
+ #tariff .rg-rate-table thead{display:none}
+ #tariff .rg-rate-table tbody{display:grid;grid-template-columns:1fr;gap:9px}
+ #tariff .rg-rate-table tbody tr{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:8px;padding:13px 11px;border:1px solid #e5eaf1;border-radius:13px;background:#fff;box-shadow:0 4px 13px rgba(11,26,45,.045)}
+ #tariff .rg-rate-table tbody tr:nth-child(even){background:#f7f9fc}
+ #tariff .rg-rate-table td{display:block;padding:0;border:0;background:transparent;font-size:10px;white-space:nowrap}
+ #tariff .rg-rate-table td:first-child{min-width:0;white-space:normal}
+ #tariff .rg-rate-table td strong{font-size:11px}
+ #tariff .rg-rate-table td.price{font-size:10px;text-align:right}
+ #tariff .rg-rate-table td.price:before{display:block;margin-bottom:4px;color:#8491a2;font-size:7px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+ #tariff .rg-rate-table td:nth-child(2):before{content:"NON-AC"}
+ #tariff .rg-rate-table td:nth-child(3):before{content:"AC"}
+}
+@media(prefers-reduced-motion:reduce){#tariff .rg-currency-switch button{transition:none}}
