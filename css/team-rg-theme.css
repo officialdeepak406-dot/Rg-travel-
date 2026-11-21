@@ -211,3 +211,59 @@ section{scroll-margin-top:90px}.cream{background:#eef1f5}.kicker{color:#c28e00}.
  #trips .scroll-hint{font-size:9px}
  #trips .slider-controls .arrow{width:35px;height:35px;font-size:17px}
 }
+
+/* TEAM RG — Made for Your Occasion: premium navy and gold responsive redesign */
+.occasion-section{position:relative;isolation:isolate;overflow:hidden;padding:clamp(58px,7vw,92px) 0 clamp(64px,7vw,88px);background:linear-gradient(180deg,#f8fafc 0%,#eef3f9 100%)}
+.occasion-section:before,.occasion-section:after{content:"";position:absolute;z-index:-1;pointer-events:none;border-radius:50%;filter:blur(1px)}
+.occasion-section:before{width:520px;height:260px;right:-170px;top:55px;background:radial-gradient(ellipse,rgba(255,201,40,.13),transparent 68%)}
+.occasion-section:after{width:540px;height:250px;left:-220px;bottom:-80px;background:radial-gradient(ellipse,rgba(27,72,116,.1),transparent 70%)}
+.occasion-heading{text-align:center;position:relative;margin:0 auto 34px;max-width:780px}
+.occasion-kicker{display:flex;align-items:center;justify-content:center;gap:13px;color:#0b1a2d;font:800 10px/1 Manrope,Arial,sans-serif;letter-spacing:.24em}
+.occasion-kicker span,.occasion-kicker:after{content:"";width:35px;height:3px;border-radius:5px;background:#ffc928}
+.occasion-heading h2{margin:3px 0 0;color:#0b1a2d;font:italic 700 clamp(58px,8vw,100px)/.98 "Playfair Display",Georgia,serif;letter-spacing:-3px;text-shadow:0 7px 15px rgba(8,24,43,.1)}
+.occasion-heading h2 em{font-style:italic}
+.occasion-heading h2:after{content:"";display:block;width:min(300px,55%);height:7px;margin:8px auto 0;border-bottom:5px solid #ffc928;border-radius:50%;transform:rotate(-1deg)}
+.occasion-heading>p{margin:15px 0 0;color:#68778a;font:600 clamp(13px,1.5vw,17px)/1.5 Manrope,Arial,sans-serif}
+.occasion-route{display:flex;align-items:center;gap:10px;position:absolute;top:44%;left:50%;width:min(570px,80%);transform:translate(-50%,-50%);z-index:-1;opacity:.24}
+.occasion-route i{height:1px;border-top:2px dashed #e5ae00;flex:1}
+.occasion-route span{color:#d7a500;font-size:23px}
+.occasion-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.occasion-card{padding:0!important;border:1px solid rgba(11,26,45,.08)!important;border-radius:25px!important;overflow:hidden;background:#fff!important;box-shadow:0 14px 34px rgba(11,26,45,.09);transition:transform .3s ease,box-shadow .3s ease}
+.occasion-card:hover{transform:translateY(-6px);box-shadow:0 22px 42px rgba(11,26,45,.15)}
+.occasion-art{height:155px;position:relative;display:flex;align-items:flex-end;padding:18px 22px;background-color:#16334e;overflow:hidden}
+.occasion-art:before,.occasion-art:after{content:"";position:absolute;inset:0;pointer-events:none}
+.occasion-art:before{background:linear-gradient(130deg,rgba(5,18,34,.04),rgba(5,18,34,.58))}
+.occasion-art:after{background:radial-gradient(circle at 80% 15%,rgba(255,201,40,.3),transparent 35%)}
+.occasion-family .occasion-art{background:linear-gradient(135deg,#a85d28 0%,#e8a64f 43%,#102b43 100%)}
+.occasion-corporate .occasion-art{background:linear-gradient(135deg,#547e9e 0%,#1e4969 48%,#091a2c 100%)}
+.occasion-events .occasion-art{background:linear-gradient(135deg,#9c5a3d 0%,#d5a25d 46%,#15243b 100%)}
+.occasion-art-icon{position:absolute;right:25px;top:10px;color:rgba(255,255,255,.22);font:400 100px/1 Georgia,serif;z-index:1}
+.occasion-art-label{position:relative;z-index:2;color:#fff;font:800 8px/1 Manrope,Arial,sans-serif;letter-spacing:.2em}
+.occasion-card-body{padding:22px 24px 24px}
+.occasion-card .use-icon{width:39px;height:39px;background:#ffc928;color:#0b1a2d;border:4px solid #fff;box-shadow:0 4px 12px rgba(11,26,45,.12);margin-top:-43px;position:relative;z-index:3}
+.occasion-card h3{font:700 clamp(21px,2vw,26px)/1.2 "Playfair Display",Georgia,serif;color:#0b1a2d;margin:13px 0 9px}
+.occasion-card h3 b{color:#c08b00;font-weight:700}
+.occasion-card p{font:500 11px/1.7 Manrope,Arial,sans-serif;color:#66758a;margin:0;min-height:57px}
+.occasion-card ul{padding:0;margin:16px 0 0;list-style:none;color:#526176;font:600 10px/2 Manrope,Arial,sans-serif}
+.occasion-card li:before{content:"✓";display:inline-grid;place-items:center;width:17px;height:17px;border-radius:50%;background:#ffc928;color:#0b1a2d;font-size:10px;margin-right:8px}
+@media(max-width:900px){.occasion-grid{gap:14px}.occasion-art{height:135px}.occasion-card-body{padding:18px}.occasion-card p{min-height:72px}}
+@media(max-width:700px){
+ .occasion-section{padding:48px 0 54px}
+ .occasion-heading{margin-bottom:23px}
+ .occasion-kicker{font-size:9px;letter-spacing:.19em;gap:10px}
+ .occasion-kicker span,.occasion-kicker:after{width:24px;height:2px}
+ .occasion-heading h2{font-size:clamp(54px,15vw,76px);letter-spacing:-2px}
+ .occasion-heading h2:after{height:5px;border-bottom-width:4px;width:48%}
+ .occasion-heading>p{font-size:12px;margin-top:11px}
+ .occasion-route{width:88%;top:43%;opacity:.16}
+ .occasion-grid{grid-template-columns:1fr;gap:14px}
+ .occasion-card{border-radius:20px!important}
+ .occasion-art{height:118px;padding:14px 17px}
+ .occasion-art-icon{font-size:78px;right:20px}
+ .occasion-card-body{padding:16px 18px 19px}
+ .occasion-card .use-icon{width:36px;height:36px;margin-top:-39px;font-size:10px}
+ .occasion-card h3{font-size:22px;margin:11px 0 6px}
+ .occasion-card p{font-size:11px;min-height:0;line-height:1.65}
+ .occasion-card ul{font-size:10px;line-height:2;margin-top:11px}
+}
+@media(prefers-reduced-motion:reduce){.occasion-card{transition:none}.occasion-card:hover{transform:none}}
