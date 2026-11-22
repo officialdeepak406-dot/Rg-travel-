@@ -1,15 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 520" role="img" aria-labelledby="title desc">
 <title id="title">RG TRAVEL — A Travel in Chennai</title>
-<desc id="desc">RG TRAVEL in metallic silver, yellow and red lettering with the tagline A Travel in Chennai.</desc>
+<desc id="desc">RG TRAVEL wordmark in metallic silver, yellow and red, with the tagline A Travel in Chennai.</desc>
 <defs>
   <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#ffffff"/><stop offset=".2" stop-color="#aeb7c2"/>
-    <stop offset=".43" stop-color="#ffffff"/><stop offset=".68" stop-color="#8995a2"/>
+    <stop offset="0" stop-color="#fff"/><stop offset=".2" stop-color="#aeb7c2"/>
+    <stop offset=".43" stop-color="#fff"/><stop offset=".68" stop-color="#8995a2"/>
     <stop offset="1" stop-color="#f8fafc"/>
   </linearGradient>
   <linearGradient id="yellow" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#ffe94f"/><stop offset=".52" stop-color="#ffd000"/>
-    <stop offset="1" stop-color="#d89b00"/>
+    <stop offset="0" stop-color="#ffe94f"/><stop offset=".52" stop-color="#ffd000"/><stop offset="1" stop-color="#d89b00"/>
   </linearGradient>
   <linearGradient id="red" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0" stop-color="#ff343d"/><stop offset="1" stop-color="#d90012"/>
