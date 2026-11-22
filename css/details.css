@@ -2,3 +2,123 @@
 @media(max-width:1000px){.detail-nav nav{display:none}.menu-btn{display:block}.detail-menu{position:absolute;left:14px;right:14px;top:74px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:7px;box-shadow:var(--shadow)}.detail-menu.open{display:block}.detail-menu a{display:block;padding:13px;border-radius:12px;font-size:12px;font-weight:800}.hero-grid,.callback-grid,.two-col{grid-template-columns:1fr}.hero-image{height:430px}.spec-grid{grid-template-columns:repeat(2,1fr)}.use-strip{grid-template-columns:1fr 1fr}.media-track{grid-auto-columns:calc((100% - 30px)/3)}}
 @media(max-width:650px){.wrap{width:min(100% - 24px,600px)}.nav-row{height:70px}.brand b{font-size:12px}.brand small{font-size:7px}.detail-hero{padding:35px 0 60px}.hero-grid{gap:30px}.hero-copy h1{font-size:48px}.hero-copy p{font-size:13px}.hero-image{height:330px;border-radius:22px}.section{padding:68px 0}.section-head{display:block}.section-head p{margin-top:14px}.media-track{grid-auto-columns:84%;gap:12px}.media-card{height:330px}.spec-grid,.use-strip{grid-template-columns:1fr}.day-card{grid-template-columns:1fr;gap:8px}.day-card h3{font-size:26px}.callback h2{font-size:43px}.callback-form{grid-template-columns:1fr}.callback-form .gold-btn,.callback-form small{grid-column:auto}.footer-grid{grid-template-columns:1fr;gap:25px}.footline{display:block}.footline span{display:block;margin:5px 0}.hero-actions>*{width:100%}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+/* =========================================================
+   RG TRAVEL — premium vehicle detail theme
+   Shared by every page in /pages/vehicles/
+   Palette: deep navy, warm white and signature RG yellow.
+   ========================================================= */
+:root{
+  --navy:#07182b;
+  --ink:#0b1b2e;
+  --muted:#627187;
+  --gold:#ffc400;
+  --cream:#fbfaf6;
+  --line:#e8e2d5;
+  --soft:#f3f5f7;
+  --shadow:0 22px 60px rgba(7,24,43,.13);
+}
+body{background:var(--cream);color:var(--ink)}
+.detail-nav{background:rgba(7,24,43,.97);border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 10px 30px rgba(7,24,43,.12)}
+.nav-row{min-height:78px}
+.brand{gap:12px}
+.brand .logo{border:1.5px solid var(--gold);color:var(--gold);background:rgba(255,196,0,.08);width:46px;height:46px}
+.brand b{color:#fff;letter-spacing:1px}
+.brand small{color:#d5b66a}
+.detail-nav nav{color:#f2f5f8}
+.detail-nav nav a{transition:color .25s ease}
+.detail-nav nav a:hover,.detail-nav nav a.active{color:var(--gold)}
+.detail-nav nav a.active:after,.detail-nav nav a:hover:after{height:3px;background:var(--gold);bottom:-11px}
+.nav-btn,.gold-btn{background:var(--gold);color:#07182b;box-shadow:0 8px 22px rgba(255,196,0,.16)}
+.nav-btn:hover,.gold-btn:hover{background:#ffd33d;color:#07182b;box-shadow:0 15px 32px rgba(255,196,0,.24)}
+.menu-btn{background:#10253c;border-color:rgba(255,255,255,.2);color:#fff}
+.detail-menu{background:#0b2038;border-color:rgba(255,255,255,.12)}
+.detail-menu a{color:#fff}
+.detail-menu a:hover{background:rgba(255,196,0,.1);color:var(--gold)}
+.detail-hero{position:relative;overflow:hidden;padding:56px 0 70px;background:linear-gradient(115deg,#061629 0%,#0b2340 58%,#102c49 100%);color:#fff}
+.detail-hero:before{content:"";position:absolute;right:43%;top:-34%;width:520px;height:520px;border:1px solid rgba(255,196,0,.28);border-radius:50%;pointer-events:none}
+.detail-hero .wrap{position:relative;z-index:1}
+.back{color:#d5dfeb;margin-bottom:28px}
+.back:hover{color:var(--gold)}
+.hero-grid{gap:48px}
+.hero-copy .kicker,.detail-hero .kicker{color:var(--gold)}
+.hero-copy h1{color:#fff;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-2.8px;font-size:clamp(48px,6vw,78px);line-height:1}
+.hero-copy p{color:#d4deea;font-size:15px;max-width:560px}
+.chips span{background:rgba(255,196,0,.12);border:1px solid rgba(255,196,0,.34);color:#ffda66;padding:9px 13px}
+.hero-actions{gap:12px}
+.hero-actions .gold-btn{background:var(--gold);color:#07182b}
+.outline-btn{background:transparent;border:1px solid rgba(255,255,255,.5);color:#fff}
+.outline-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(255,196,0,.08)}
+.hero-image{height:500px;border:2px solid rgba(255,196,0,.75);border-radius:28px;box-shadow:0 26px 65px rgba(0,0,0,.28)}
+.hero-image:after{content:"";position:absolute;inset:0;border-radius:26px;box-shadow:inset 0 -90px 80px rgba(3,13,25,.18);pointer-events:none}
+.hero-image span{background:var(--gold);color:#07182b;font-size:9px}
+.section{background:var(--cream)}
+.section.soft{background:#f0f3f6}
+.section-head h2,.info-panel h2,.callback h2{color:var(--navy)}
+.section-head .kicker,.callback .kicker{color:#b98200}
+.section-head p{color:#65748a}
+.media-card{border-radius:20px;box-shadow:0 16px 38px rgba(7,24,43,.12)}
+.media-card:after{background:linear-gradient(transparent 42%,rgba(4,17,31,.84))}
+.media-card span{color:var(--gold)}
+.slider-bar{color:#65748a}
+.slider-bar button{background:var(--navy);border-color:var(--navy);color:var(--gold);transition:.25s ease}
+.slider-bar button:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.spec-box{background:#fff;border:1px solid #e6e0d4;box-shadow:0 8px 20px rgba(7,24,43,.035)}
+.spec-box small{color:#9b761e}
+.spec-box strong{color:#10233a}
+.spec-box:hover{border-color:rgba(255,196,0,.65);box-shadow:0 18px 38px rgba(7,24,43,.09)}
+.use-strip>div{background:#0a1d33;border:1px solid rgba(255,196,0,.16)}
+.use-strip b{color:#fff}
+.use-strip span{color:#c1ccda}
+.info-panel{border-color:#e6e0d4}
+.info-panel.dark{background:var(--navy);border-color:var(--navy)}
+.callback{background:linear-gradient(120deg,#07182b,#102b48);color:#fff;position:relative;overflow:hidden}
+.callback:before{content:"";position:absolute;left:-150px;bottom:-300px;width:600px;height:600px;border:1px solid rgba(255,196,0,.2);border-radius:50%;pointer-events:none}
+.callback-grid{position:relative;z-index:1}
+.callback h2{color:#fff}
+.callback p{color:#c8d3e0}
+.callback-points{color:#e5ebf2}
+.callback-form{background:#fff;border:1px solid rgba(255,255,255,.2);box-shadow:0 22px 55px rgba(0,0,0,.2)}
+.callback-form label{color:#46566b}
+.callback-form input{border-color:#dfe4ea;background:#fbfcfd;color:#0b1b2e}
+.callback-form input:focus{border-color:#d6a500;box-shadow:0 0 0 3px rgba(255,196,0,.16)}
+.callback-form .gold-btn{background:var(--gold);color:#07182b}
+.callback-form small{color:#69788c}
+.footer{background:#061426;border-top:3px solid var(--gold)}
+.footer .brand .logo{color:var(--gold);border-color:var(--gold)}
+.footer .brand b{color:#fff}
+.footer .brand small{color:#d5b66a}
+.footer p,.footer a{color:#c0cad6}
+.footer a:hover{color:var(--gold)}
+.footer h4{color:var(--gold)}
+.footline{border-color:rgba(255,255,255,.16);color:#8c9bad}
+.toast{background:var(--gold);color:#07182b}
+
+/* Tablet and phone refinements */
+@media(max-width:1000px){
+  .detail-nav{background:rgba(7,24,43,.98)}
+  .detail-menu a{color:#f6f8fb}
+  .detail-menu a:hover{background:rgba(255,196,0,.1);color:var(--gold)}
+  .hero-grid{gap:30px}
+  .hero-image{height:420px}
+}
+@media(max-width:650px){
+  .nav-row{height:70px}
+  .detail-hero{padding:34px 0 48px}
+  .detail-hero:before{width:320px;height:320px;right:-180px;top:15%}
+  .back{margin-bottom:20px}
+  .hero-copy h1{font-size:clamp(40px,11vw,54px);letter-spacing:-1.8px}
+  .hero-copy p{font-size:13px;color:#d5dfeb}
+  .hero-image{height:300px;border-radius:20px}
+  .hero-image:after{border-radius:18px}
+  .hero-actions .gold-btn,.hero-actions .outline-btn{min-height:46px}
+  .section-head h2{font-size:clamp(32px,9vw,43px);letter-spacing:-1.3px}
+  .media-track{grid-auto-columns:82%}
+  .media-card{height:300px}
+  .spec-box{min-height:94px}
+  .callback{padding-block:54px}
+  .callback h2{font-size:42px;letter-spacing:-1.4px}
+  .callback-form{border-radius:20px;padding:18px}
+  .footer{padding:48px 0 22px}
+}
