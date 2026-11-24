@@ -20,7 +20,7 @@ function startPreviewGallery(slider){
  slider.addEventListener('mouseenter',pause);slider.addEventListener('focusin',pause);
  slider.addEventListener('touchstart',pause,{passive:true});slider.addEventListener('pointerdown',pause,{passive:true});
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- if(!reduced && dots.length>1){
+ if(!reduced && track.querySelectorAll('.preview-gallery-card').length>1){
    timer=window.setInterval(()=>{
      if(Date.now()<pauseUntil)return;
      const current=galleryMetrics(slider);if(!current)return;
