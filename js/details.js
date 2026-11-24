@@ -7,29 +7,53 @@ function backToFleet(event){
 }
 function moveTrack(btn,dir){const track=btn.closest('.media-slider')?.querySelector('.media-track');if(track)track.scrollBy({left:dir*track.clientWidth*.82,behavior:'smooth'})}
 function sendCallback(form){const d=new FormData(form);const msg=`RG Tempo Traveller — Callback Request\n\nPage: ${d.get('context')||'-'}\nName: ${d.get('name')||'-'}\nCustomer Phone / WhatsApp: ${d.get('phone')||'-'}\nPreferred Date: ${d.get('date')||'-'}\nTravellers: ${d.get('travellers')||'-'}\nPickup & Destination: ${d.get('route')||'-'}\n\nPlease call the customer back regarding availability and booking.`;window.open('https://wa.me/'+OWNER_WHATSAPP+'?text='+encodeURIComponent(msg),'_blank');return false}
-function galleryMetrics(slider){const track=slider.querySelector('.preview-gallery-track');const card=track?.querySelector('.preview-gallery-card');if(!track||!card)return null;const gap=parseFloat(getComputedStyle(track).gap)||0;return{track,card,step:card.getBoundingClientRect().width+gap,max:Math.max(0,track.scrollWidth-track.clientWidth)}}
-function updateGalleryDots(slider){const m=galleryMetrics(slider);if(!m)return;const dots=[...slider.querySelectorAll('.preview-gallery-dots button')];const index=Math.max(0,Math.min(dots.length-1,Math.round(m.track.scrollLeft/m.step)));dots.forEach((dot,i)=>dot.classList.toggle('active',i===index))}
-function goPreviewGallery(button,index){const slider=button.closest('[data-gallery-slider]');const m=slider&&galleryMetrics(slider);if(!m)return;m.track.scrollTo({left:index*m.step,behavior:'smooth'});updateGalleryDots(slider)}
-function movePreviewGallery(button,dir){const slider=button.closest('[data-gallery-slider]');const m=slider&&galleryMetrics(slider);if(!m)return;let next=m.track.scrollLeft+dir*m.step;if(next>m.max+4)next=0;if(next<0)next=m.max;m.track.scrollTo({left:next,behavior:'smooth'});updateGalleryDots(slider)}
+function galleryMetrics(slider){
+ const track=slider.querySelector('.preview-gallery-track');
+ const cards=track?[...track.querySelectorAll('.preview-gallery-card')]:[];
+ if(!track||!cards.length)return null;
+ const gap=parseFloat(getComputedStyle(track).gap)||0;
+ const index=cards.reduce((best,card,i)=>Math.abs(card.offsetLeft-track.scrollLeft)<Math.abs(cards[best].offsetLeft-track.scrollLeft)?i:best,0);
+ return{track,cards,gap,index,max:Math.max(0,track.scrollWidth-track.clientWidth)};
+}
+function classifyGalleryImage(img){
+ const card=img.closest('.preview-gallery-card');if(!card)return;
+ const w=img.naturalWidth,h=img.naturalHeight;if(!w||!h)return;
+ card.classList.remove('is-portrait','is-landscape','is-square');
+ const ratio=w/h;
+ card.classList.add(ratio<0.82?'is-portrait':ratio>1.18?'is-landscape':'is-square');
+}
+function scrollGalleryTo(slider,index){
+ const m=galleryMetrics(slider);if(!m)return;
+ const safe=Math.max(0,Math.min(m.cards.length-1,index));
+ m.track.scrollTo({left:m.cards[safe].offsetLeft,behavior:'smooth'});
+}
+function updateGalleryDots(slider){/* Pagination indicators intentionally hidden. */}
+function goPreviewGallery(button,index){const slider=button.closest('[data-gallery-slider]');if(slider)scrollGalleryTo(slider,index)}
+function movePreviewGallery(button,dir){
+ const slider=button.closest('[data-gallery-slider]');const m=slider&&galleryMetrics(slider);if(!m)return;
+ let next=m.index+dir;if(next>=m.cards.length)next=0;if(next<0)next=m.cards.length-1;
+ scrollGalleryTo(slider,next);
+}
 function startPreviewGallery(slider){
  const m=galleryMetrics(slider);if(!m)return;
  const track=m.track;let pauseUntil=0;let timer=null;
  const pause=()=>{pauseUntil=Date.now()+5500};
- const dots=[...slider.querySelectorAll('.preview-gallery-dots button')];
- track.addEventListener('scroll',()=>updateGalleryDots(slider),{passive:true});
+ track.querySelectorAll('img').forEach(img=>{
+   if(img.complete)classifyGalleryImage(img);
+   else {img.addEventListener('load',()=>classifyGalleryImage(img),{once:true});img.addEventListener('error',()=>{img.closest('.preview-gallery-card')?.classList.add('is-landscape')},{once:true})}
+ });
+ track.addEventListener('scroll',()=>{}, {passive:true});
  slider.addEventListener('mouseenter',pause);slider.addEventListener('focusin',pause);
  slider.addEventListener('touchstart',pause,{passive:true});slider.addEventListener('pointerdown',pause,{passive:true});
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- if(!reduced && track.querySelectorAll('.preview-gallery-card').length>1){
+ if(!reduced&&m.cards.length>1){
    timer=window.setInterval(()=>{
      if(Date.now()<pauseUntil)return;
      const current=galleryMetrics(slider);if(!current)return;
-     const atEnd=current.track.scrollLeft>=current.max-6;
-     current.track.scrollTo({left:atEnd?0:current.track.scrollLeft+current.step,behavior:'smooth'});
-     updateGalleryDots(slider);
+     const next=current.index>=current.cards.length-1?0:current.index+1;
+     current.track.scrollTo({left:current.cards[next].offsetLeft,behavior:'smooth'});
    },3800);
  }
- slider.addEventListener('mouseenter',()=>{if(timer)pause()});
  updateGalleryDots(slider);
 }
 document.querySelectorAll('[data-gallery-slider]').forEach(startPreviewGallery);
