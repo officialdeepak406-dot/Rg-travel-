@@ -172,3 +172,25 @@ body{background:var(--cream);color:var(--ink)}
   .detail-hero .hero-copy,.detail-hero .hero-image{animation:none}
   .media-card,.gold-btn,.outline-btn,.nav-btn,.back{transition:none}
 }
+
+
+/* Official RG wordmark image used in trip and destination headers */
+.detail-nav .brand-logo,
+.footer .brand-logo{
+  display:block;
+  width:clamp(190px,21vw,280px);
+  height:auto;
+  max-height:68px;
+  object-fit:contain;
+  object-position:left center;
+  flex:0 1 auto;
+}
+.detail-nav .brand > span:not(.logo),
+.footer .brand > span:not(.logo){display:none}
+@media(max-width:1000px){
+  .detail-nav .brand-logo,.footer .brand-logo{width:210px;max-height:58px}
+}
+@media(max-width:650px){
+  .detail-nav .brand-logo{width:clamp(165px,52vw,205px);max-height:50px}
+  .footer .brand-logo{width:205px;max-height:56px}
+}
