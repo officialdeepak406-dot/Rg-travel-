@@ -137,3 +137,28 @@
 }
 @media(max-width:390px){.preview-hero-image{height:285px;min-height:285px}.preview-gallery-track .preview-gallery-card{height:170px}}
 @media(prefers-reduced-motion:reduce){.preview-gallery-track,.preview-gallery-viewport{scroll-behavior:auto}.preview-gallery-arrow,.preview-gallery-dots button{transition:none}}
+
+
+/* Final vehicle image fit: show complete vehicles without cropping */
+.preview-hero{height:320px}
+.preview-hero-image{inset:0 0 0 40.5%;display:flex;align-items:center;justify-content:center;background:#08223a;padding:14px 22px 14px 12px}
+.preview-hero-image img{width:100%;height:100%;object-fit:contain;object-position:center;background:transparent}
+.preview-gallery-card{background:#e9eef2}
+.preview-gallery-track .preview-gallery-card{height:208px}
+.preview-gallery-card img{width:100%;height:100%;object-fit:contain;object-position:center;background:#e9eef2;padding:5px;transform:none!important}
+.preview-gallery-card:hover img{transform:none!important}
+.preview-gallery-card:after{inset:58% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.62))}
+.preview-gallery-dots{display:none!important}
+@media(max-width:760px){
+ .preview-hero{height:auto;min-height:0;display:flex;flex-direction:column}
+ .preview-hero-content{height:auto;padding:26px 0 22px}
+ .preview-hero-image{position:relative;inset:auto;width:100%;height:260px;min-height:260px;padding:10px 12px;background:#08223a;order:2}
+ .preview-hero-image img{object-fit:contain;object-position:center;width:100%;height:100%}
+ .preview-hero-shape{display:none}
+ .preview-gallery-track .preview-gallery-card{height:190px}
+ .preview-gallery-card img{object-fit:contain;padding:4px}
+}
+@media(max-width:390px){
+ .preview-hero-image{height:230px;min-height:230px}
+ .preview-gallery-track .preview-gallery-card{height:170px}
+}
