@@ -229,3 +229,19 @@
 .preview-gallery-track img{-webkit-user-drag:none;user-select:none}
 .preview-gallery-track.is-dragging{scroll-snap-type:none;cursor:grabbing}
 .preview-gallery-track.is-dragging .preview-gallery-card{pointer-events:none}
+
+
+/* Vehicle hero: consistent back-link and booking-action alignment on every detail page */
+.preview-hero-content{padding-top:25px;padding-bottom:42px}
+.preview-back-link{margin:0 0 11px}
+.preview-hero h1{margin-top:8px;margin-bottom:7px}
+.preview-hero-content>p{margin-bottom:12px}
+.preview-chips{margin-bottom:12px}
+.preview-hero-actions{margin-top:0;align-items:center}
+@media(max-width:760px){
+ .preview-hero-content{padding-top:20px;padding-bottom:38px}
+ .preview-back-link{margin:0 0 10px}
+ .preview-hero h1{margin-top:8px}
+ .preview-hero-content>p{margin-bottom:12px}
+ .preview-chips{margin-bottom:12px}
+}
