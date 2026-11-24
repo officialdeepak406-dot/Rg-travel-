@@ -217,3 +217,15 @@
  .preview-gallery-track .preview-gallery-card.is-square{--gallery-card-width:72vw;--gallery-card-height:195px}
 }
 @media(prefers-reduced-motion:reduce){.preview-gallery-track{scroll-behavior:auto}}
+
+
+/* Hero breathing room: keep both enquiry actions clear of the overlapping facts bar */
+@media(min-width:761px){
+ .preview-hero{height:420px}
+ .preview-hero-content{padding-top:30px;padding-bottom:48px}
+ .preview-hero-image{padding-top:18px;padding-bottom:18px}
+}
+.preview-gallery-track{user-select:none;-webkit-user-select:none}
+.preview-gallery-track img{-webkit-user-drag:none;user-select:none}
+.preview-gallery-track.is-dragging{scroll-snap-type:none;cursor:grabbing}
+.preview-gallery-track.is-dragging .preview-gallery-card{pointer-events:none}
