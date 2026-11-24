@@ -38,6 +38,26 @@ function startPreviewGallery(slider){
  const m=galleryMetrics(slider);if(!m)return;
  const track=m.track;let pauseUntil=0;let timer=null;
  const pause=()=>{pauseUntil=Date.now()+5500};
+ // Desktop free-hand drag; touch devices retain their native horizontal swipe.
+ let dragStart=null;
+ track.addEventListener('pointerdown',e=>{
+   if(e.pointerType!=='mouse'||e.button!==0)return;
+   dragStart={x:e.clientX,left:track.scrollLeft,moved:false};
+   pause();
+ });
+ track.addEventListener('pointermove',e=>{
+   if(!dragStart)return;
+   const dx=e.clientX-dragStart.x;
+   if(Math.abs(dx)>4){dragStart.moved=true;track.classList.add('is-dragging');track.scrollLeft=dragStart.left-dx;e.preventDefault()}
+ });
+ const endDrag=()=>{
+   if(!dragStart)return;
+   track.classList.remove('is-dragging');
+   dragStart=null;
+ };
+ track.addEventListener('pointerup',endDrag);
+ track.addEventListener('pointercancel',endDrag);
+ track.addEventListener('pointerleave',endDrag);
  track.querySelectorAll('img').forEach(img=>{
    if(img.complete)classifyGalleryImage(img);
    else {img.addEventListener('load',()=>classifyGalleryImage(img),{once:true});img.addEventListener('error',()=>{img.closest('.preview-gallery-card')?.classList.add('is-landscape')},{once:true})}
